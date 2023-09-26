@@ -19,8 +19,7 @@
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
   font-weight: 700;
 }
-html,
-body {
+* {
   font-family: "Avenir Next", sans-serif;
   padding: 0;
   margin: 0;
@@ -55,7 +54,6 @@ body {
 
 .header {
   background-color: #323232;
-  padding-top: 1rem;
 }
 .header__nav {
   display: flex;
@@ -65,11 +63,22 @@ body {
   padding: 0 1rem;
   height: 10vh;
 }
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-items: baseline;
+    justify-content: flex-start;
+  }
+}
 .header__link {
   text-decoration: none;
   color: #AFAFAF;
 }
-.header__link--active, .header__link :hover {
+.header__link--active,
+.header__link :hover {
   color: #FFFFFF;
 }
 .header__list {
@@ -79,8 +88,14 @@ body {
   justify-content: center;
 }
 .header__list-item {
+  padding-top: 0.75rem;
   width: 50vw;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .header__list-item {
+    width: 10vw;
+  }
 }
 .header__list-item--active {
   border-bottom: 0.1875rem solid #FFFFFF;
@@ -117,18 +132,22 @@ body {
   padding-left: 1rem;
 }
 
+.moto {
+  padding: 1rem;
+}
+.moto__img {
+  width: 100%;
+}
+
 .about {
   padding: 1rem;
 }
-.about__title {
-  font-size: 1.4rem;
-  font-weight: 700;
+
+.photos {
+  background-color: #E1E1E1;
+  padding: 1rem;
 }
-.about__img {
+.photos__img {
   width: 100%;
-}
-.about__moto {
-  font-size: 0.875rem;
-  line-height: 0;
-  font-weight: 600;
+  padding: 0.3rem;
 }/*# sourceMappingURL=bio.css.map */
