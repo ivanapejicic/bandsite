@@ -31,8 +31,8 @@ body {
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .header__logo {
   margin: 0.5rem;
@@ -59,21 +59,47 @@ body {
 }
 
 .hero {
-  position: relative;
-  background-color: #323232;
-  background-image: url("../assets/images/hero-bio.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 50%;
-}
-.hero__title {
-  position: absolute;
-  color: #FFFFFF;
-  font-size: 2.25rem;
-  line-height: 2.75rem;
-  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .hero__img {
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 40vw;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.hero__container {
+  background-color: #323232;
+  opacity: 50%;
+  height: 40vw;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.hero__title {
+  color: #FFFFFF;
+  margin: 0;
+  position: absolute;
+  z-index: 3;
+  padding-left: 1rem;
+}
+
+.about {
+  padding: 1rem;
+}
+.about__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.about__img {
+  width: 100%;
+}
+.about__moto {
+  font-size: 0.875rem;
+  font-weight: 600;
 }/*# sourceMappingURL=bio.css.map */
