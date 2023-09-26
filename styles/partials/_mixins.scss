@@ -1,1 +1,20 @@
+@use './variables' as *;
+@use './typography' as *;
 
+@mixin mobile{
+    @media (min-width: $phone-breakpoint) and (max-width: $tablet-breakpoint-1){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint-1){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: $desktop-breakpoint){
+        @content;
+    }
+}

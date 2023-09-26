@@ -1,3 +1,76 @@
 @use "./partials/mixins" as *;
-@use "./partials/styles" as *;
+@use "./partials/typography" as *;
 @use "./partials/variables" as *;
+
+html,
+body {
+    font-family: 'Avenir Next', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: $bandsite-black;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // position: relative;
+
+    &__logo {
+        font-size: 1.5rem;
+        max-width: 7.5rem;
+        max-height: 1.25rem;
+    }
+
+    &__nav {
+        &-list {
+            display: flex;
+            gap: 6rem;
+            list-style-type: none;
+            padding: 0;
+
+            &__item {
+                gap: 3rem;
+            }
+
+            &__link {
+                text-decoration: none;
+                color: $mercury;
+                font-weight: 400;
+                
+
+                &:hover,
+                &--active {
+                    color: $white;
+                    font-weight: 600;
+                    border-bottom: 4px solid white;
+                    padding-bottom: .74rem;
+                    // width: 50vw;
+                    // position: absolute;
+                    // left: 0;
+                }
+            }
+        }
+    }
+}
+
+.hero{
+    position: relative;
+
+    &__title{
+        position: absolute;
+        top: 50%;
+        left: 5rem;
+        color: $white;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        font-weight: 700;
+    }
+    &__img{
+        opacity: 50%;
+        width: 100%;
+        height: 30;
+    }
+}
