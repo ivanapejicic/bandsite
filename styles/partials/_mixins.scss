@@ -1,32 +1,26 @@
 @use './variables' as *;
 @use './typography' as *;
 
-@mixin mobile{
-    @media (min-width: $phone-breakpoint) and (max-width: $tablet-breakpoint-1){
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint) {
         @content;
     }
 }
 
-@mixin tablet{
-    @media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint-1){
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
         @content;
     }
 }
 
-@mixin desktop{
-    @media (min-width: $desktop-breakpoint){
-        @content;
-    }
-}
-
-@mixin background($url){
+@mixin background($url) {
     background-image: url($url);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-@mixin flex($direction){
+@mixin flex($direction) {
     display: flex;
     flex-direction: $direction;
     justify-content: center;
