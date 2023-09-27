@@ -9,41 +9,91 @@
     box-sizing: border-box;
 }
 
-.page-header,
+.page-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        font-weight: 700;
+    }
+}
+
 .section-header {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
+
+    @include tablet {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        font-weight: 700;
+    }
 }
 
 .subheader {
     font-size: .875rem;
     line-height: 1.375rem;
     font-weight: 600;
-    // letter-spacing: .0625rem;
-    
+
+    @include tablet {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+    }
+
 }
 
-.body-copy,
+.body-copy {
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+
+    @include tablet {
+        font-size: .875rem;
+        line-height: 1.375rem;
+        font-weight: 400;
+    }
+}
+
 .footer-copy {
     font-size: .8125rem;
     line-height: 1.125rem;
     font-weight: 400;
+
+    @include tablet {
+        font-size: .875rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+    }    
 }
 
 .labels-buttons {
     font-size: .625rem;
     line-height: 1.25rem;
     font-weight: 700;
+
+    @include tablet {
+        font-size: .75rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+    }
 }
 
 .header {
     background-color: $bandsite-black;
 
+    // padding-top: 1rem;
+    &__logo {
+        padding-top: 1rem;
+    }
+
     &__nav {
         @include flex(column);
         justify-content: flex-end;
-        padding: 0 1rem;
+        padding: 0.5rem 1rem;
         height: 10vh;
 
         @include tablet {
@@ -57,17 +107,18 @@
     &__link {
         text-decoration: none;
         color: $silver;
+
         &--active,
         &:hover {
             color: $white;
         }
     }
-    
+
     &__list {
         list-style-type: none;
         @include flex(row);
 
-        @include tablet{
+        @include tablet {
             gap: 1rem;
         }
 
@@ -85,7 +136,8 @@
                 border-bottom: .1875rem solid $white;
 
             }
-            &--active{
+
+            &--active {
                 font-weight: 600;
             }
         }
@@ -126,8 +178,8 @@
 
 .moto {
     padding: 1rem;
-    
-    &__title{
+
+    &__title {
         padding-top: .5rem;
         padding-bottom: 1rem;
     }
@@ -138,62 +190,64 @@
     }
 }
 
-.about{
+.about {
     padding: 0 1rem 1rem;
 
-    &__title{
+    &__title {
         padding-top: 1.5rem;
         padding-bottom: 1rem;
     }
-    &__part1{
+
+    &__part1 {
         padding-bottom: 1rem;
     }
 
-    
+
 }
 
-.photos{
+.photos {
     background-color: $alabaster;
     padding: 1rem;
 
-    &__img{
+    &__img {
         width: 100%;
         padding-bottom: 1rem;
     }
 }
 
-.footer{
+.footer {
     background-color: $bandsite-black;
     padding: 1rem;
     color: $white;
+    width: 100%;
 
-    &__top{
+    &__top {
         @include flex(column);
         align-items: flex-start;
     }
 
-    &__logos{
+    &__logos {
         @include flex(row);
         gap: 2rem;
         padding: 1rem 0;
     }
 
-    &__contact{
+    &__contact {
 
-        &-container{
+        &-container {
             padding-bottom: 1rem;
-            
 
-            &__info{
+
+            &__info {
                 padding-top: 0.5rem;
             }
         }
     }
 
-    &__bottom{
+    &__bottom {
         padding-top: 2rem;
 
-        &-logo{
+        &-logo {
             padding-bottom: 0.5rem;
         }
     }
