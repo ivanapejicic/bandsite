@@ -67,7 +67,7 @@
         font-size: .875rem;
         line-height: 1.25rem;
         font-weight: 400;
-    }    
+    }
 }
 
 .labels-buttons {
@@ -90,7 +90,7 @@
         max-height: 20px;
         max-width: 120px;
 
-        @include tablet{
+        @include tablet {
             margin-right: 2.25rem;
         }
     }
@@ -189,7 +189,7 @@
 .moto {
     padding: 1rem;
 
-    @include tablet{
+    @include tablet {
         padding: 2.25rem;
     }
 
@@ -223,10 +223,29 @@
     background-color: $alabaster;
     padding: 1rem;
 
+    &__header{
+        @include tablet{
+            padding-left: 4rem;
+        }
+    }
+    &__container {
+        @include tablet {
+            @include flex(row);
+            flex-wrap: wrap;
+        }
+    }
+
     &__img {
         width: 100%;
         padding-bottom: 1rem;
+
+        @include tablet {
+            width: 30%;
+            padding: 1.25rem;
+        }
     }
+
+
 }
 
 .footer {
