@@ -58,6 +58,7 @@
 .header__nav {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   justify-content: flex-end;
   padding: 0 1rem;
@@ -69,23 +70,29 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    align-items: baseline;
+    gap: 2rem;
     justify-content: flex-start;
+    padding-left: 4rem;
   }
 }
 .header__link {
   text-decoration: none;
   color: #AFAFAF;
 }
-.header__link--active,
-.header__link :hover {
+.header__link--active, .header__link:hover {
   color: #FFFFFF;
 }
 .header__list {
   list-style-type: none;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header__list {
+    gap: 1rem;
+  }
 }
 .header__list-item {
   padding-top: 0.75rem;
@@ -111,7 +118,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 40vw;
+  height: 50vw;
   width: 100%;
   position: absolute;
   z-index: 1;
@@ -119,7 +126,7 @@
 .hero__container {
   background-color: #323232;
   opacity: 50%;
-  height: 40vw;
+  height: 50vw;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -135,19 +142,31 @@
 .moto {
   padding: 1rem;
 }
+.moto__title {
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
 .moto__img {
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 .about {
-  padding: 1rem;
+  padding: 0 1rem 1rem;
+}
+.about__title {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+.about__part1 {
+  padding-bottom: 1rem;
 }
 
 .photos {
-  background-color: #E1E1E1;
+  background-color: #FAFAFA;
   padding: 1rem;
 }
 .photos__img {
   width: 100%;
-  padding: 0.3rem;
+  padding-bottom: 1rem;
 }/*# sourceMappingURL=bio.css.map */
