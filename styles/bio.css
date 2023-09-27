@@ -104,8 +104,11 @@
     width: 10vw;
   }
 }
-.header__list-item--active {
+.header__list-item--active, .header__list-item:hover {
   border-bottom: 0.1875rem solid #FFFFFF;
+}
+.header__list-item--active {
+  font-weight: 600;
 }
 
 .hero {
@@ -169,4 +172,37 @@
 .photos__img {
   width: 100%;
   padding-bottom: 1rem;
+}
+
+.footer {
+  background-color: #323232;
+  padding: 1rem;
+  color: #FFFFFF;
+}
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+}
+.footer__logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+.footer__contact-container {
+  padding-bottom: 1rem;
+}
+.footer__contact-container__info {
+  padding-top: 0.5rem;
+}
+.footer__bottom {
+  padding-top: 2rem;
+}
+.footer__bottom-logo {
+  padding-bottom: 0.5rem;
 }/*# sourceMappingURL=bio.css.map */
