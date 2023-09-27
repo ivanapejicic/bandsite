@@ -12,24 +12,24 @@
 .page-header {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 700;
+    font-weight: 500;
 
     @include tablet {
         font-size: 3.75rem;
         line-height: 4.25rem;
-        font-weight: 700;
+        font-weight: 500;
     }
 }
 
 .section-header {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 700;
+    font-weight: 500;
 
     @include tablet {
         font-size: 2.25rem;
         line-height: 2.75rem;
-        font-weight: 700;
+        font-weight: 500;
     }
 }
 
