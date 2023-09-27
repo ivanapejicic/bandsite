@@ -255,6 +255,10 @@
     width: 100%;
 
     &__top {
+
+        &-logoBandsite{
+            display:none;
+        }
         @include flex(column);
         align-items: flex-start;
     }

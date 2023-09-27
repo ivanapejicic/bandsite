@@ -281,6 +281,9 @@
   align-items: center;
   align-items: flex-start;
 }
+.footer__top-logoBandsite {
+  display: none;
+}
 .footer__logos {
   display: flex;
   flex-direction: row;
