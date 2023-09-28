@@ -210,33 +210,81 @@
   z-index: 3;
   padding-left: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__title {
+    padding-left: 4rem;
+  }
+}
 
 .moto {
-  padding: 1rem;
+  padding: 1.5rem 1rem 0 1rem;
 }
 @media screen and (min-width: 768px) {
   .moto {
-    padding: 2.25rem;
+    padding: 3rem 2.25rem 2.25rem;
   }
 }
-.moto__title {
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
+.moto__container {
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .moto__container {
+    margin: 2rem 2rem 0;
+  }
 }
 .moto__img {
   width: 100%;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .moto__img {
+    padding-bottom: 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .moto__subheader {
+    width: 80%;
+    padding-bottom: 1rem;
+  }
+}
+.moto__subsubheader {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .moto__subsubheader {
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 500;
+  }
+}
 
 .about {
   padding: 0 1rem 1rem;
 }
+@media screen and (min-width: 768px) {
+  .about {
+    padding: 0rem 2.25rem 2.25rem;
+    margin: 0 3.25rem 0;
+  }
+}
 .about__title {
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
 }
-.about__part1 {
+.about__paragraphs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.about__part1, .about__part2 {
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .about__part1, .about__part2 {
+    width: 47%;
+  }
 }
 
 .photos {
@@ -274,6 +322,11 @@
   color: #FFFFFF;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 2rem 4.875rem;
+  }
+}
 .footer__top {
   display: flex;
   flex-direction: column;
@@ -281,10 +334,7 @@
   align-items: center;
   align-items: flex-start;
 }
-.footer__top-logoBandsite {
-  display: none;
-}
-.footer__logos {
+.footer__top-logos {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -292,15 +342,52 @@
   gap: 2rem;
   padding: 1rem 0;
 }
+.footer__top-logoBandsite {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 4rem;
+  }
+  .footer__top-logoBandsite {
+    display: flex;
+    gap: 10rem;
+  }
+}
 .footer__contact-container {
   padding-bottom: 1rem;
 }
 .footer__contact-container__info {
   padding-top: 0.5rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__contact {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+  }
+  .footer__contact-container {
+    width: 32%;
+  }
+}
 .footer__bottom {
   padding-top: 2rem;
 }
 .footer__bottom-logo {
   padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__bottom-logo {
+    display: none;
+  }
 }/*# sourceMappingURL=bio.css.map */
