@@ -305,6 +305,10 @@
     &__top{
         @include flex(row);
         justify-content: space-between;
+
+        &-logoBandsite{
+            display: none;
+        }
     }
 
     &__top-left {
@@ -337,8 +341,10 @@
 
     &__contact {
 
+        padding-top: 1rem;
         &-container {
             padding-bottom: 1rem;
+            width: 30%;
             
             &__info {
                 padding-top: 0.5rem;
@@ -347,7 +353,8 @@
         @include tablet{
             width: 70%;
             @include flex(row);
-            gap: 2rem;
+            gap: 3rem;
+            align-items: baseline;
             flex-wrap: nowrap;
             &-container{
                 width: 32%;

@@ -334,6 +334,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.footer__top-logoBandsite {
+  display: none;
+}
 .footer__top-left {
   display: flex;
   flex-direction: column;
@@ -367,8 +370,12 @@
     gap: 10rem;
   }
 }
+.footer__contact {
+  padding-top: 1rem;
+}
 .footer__contact-container {
   padding-bottom: 1rem;
+  width: 30%;
 }
 .footer__contact-container__info {
   padding-top: 0.5rem;
@@ -380,7 +387,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
+    align-items: baseline;
     flex-wrap: nowrap;
   }
   .footer__contact-container {
