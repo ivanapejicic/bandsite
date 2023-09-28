@@ -329,12 +329,19 @@
 }
 .footer__top {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__top-left {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-items: flex-start;
 }
-.footer__top-logos {
+.footer__top-left__logos {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -342,11 +349,11 @@
   gap: 2rem;
   padding: 1rem 0;
 }
-.footer__top-logoBandsite {
+.footer__top-left-logoBandsite {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .footer__top {
+  .footer__top-left {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -355,7 +362,7 @@
     justify-content: flex-start;
     gap: 4rem;
   }
-  .footer__top-logoBandsite {
+  .footer__top-left-logoBandsite {
     display: flex;
     gap: 10rem;
   }
