@@ -110,7 +110,6 @@
 
 .header {
   background-color: #323232;
-  padding-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -118,13 +117,7 @@
   }
 }
 .header__logo {
-  max-height: 20px;
-  max-width: 120px;
-}
-@media screen and (min-width: 768px) {
-  .header__logo {
-    margin-left: 2.25rem;
-  }
+  padding: 1rem;
 }
 @media screen and (min-width: 1024px) {
   .header__logo {
@@ -138,8 +131,6 @@
   justify-content: center;
   align-items: center;
   justify-content: flex-end;
-  gap: 0.5rem;
-  height: 8vh;
 }
 @media screen and (min-width: 768px) {
   .header__nav {
@@ -148,7 +139,7 @@
     justify-content: center;
     align-items: center;
     justify-content: flex-start;
-    height: 8vh;
+    height: 6vh;
     gap: 1rem;
     padding: 0 2.5rem;
   }
@@ -308,6 +299,7 @@
 }
 .about__title {
   padding: 0.75rem 0;
+  font-weight: 500;
   padding-top: 0;
 }
 @media screen and (min-width: 768px) {
