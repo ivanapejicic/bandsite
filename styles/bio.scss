@@ -91,6 +91,11 @@
         max-width: 120px;
 
         @include tablet {
+            margin-left: 2.25rem;
+        }
+
+        @include desktop {
+            margin-left: 4.25rem;
             margin-right: 2.25rem;
         }
     }
@@ -98,13 +103,13 @@
     &__nav {
         @include flex(column);
         justify-content: flex-end;
-        // padding: 0 1rem;
         gap: 1rem;
-        height: 10vh;
+        height: 9vh;
 
         @include tablet {
             @include flex(row);
             justify-content: flex-start;
+            height: 6vh;
             padding: 0 2.25rem;
         }
     }
@@ -113,7 +118,7 @@
         text-decoration: none;
         color: $silver;
 
-        &--active,
+        &.current,
         &:hover {
             color: $white;
         }
@@ -141,13 +146,12 @@
                 padding-bottom: 0;
             }
 
-            &--active,
+            &.current,
             &:hover {
                 border-bottom: .1875rem solid $white;
-
             }
 
-            &--active {
+            &.current {
                 font-weight: 600;
             }
         }
@@ -159,6 +163,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     &__img {
         @include background('../assets/images/hero-bio.jpg');
         height: 50vw;
@@ -283,11 +288,11 @@
     color: $white;
     width: 100%;
 
-    &__top{
+    &__top {
         @include flex(row);
         justify-content: space-between;
 
-        &-logoBandsite{
+        &-logoBandsite {
             display: none;
         }
     }
@@ -307,11 +312,12 @@
             display: none;
         }
 
-        @include tablet{
+        @include tablet {
             @include flex(row);
-            align-items:baseline;
+            align-items: baseline;
             justify-content: flex-start;
             gap: 4rem;
+
             &-logoBandsite {
                 display: flex;
                 gap: 10rem;
@@ -323,21 +329,24 @@
     &__contact {
 
         padding-top: 1rem;
+
         &-container {
             padding-bottom: 1rem;
             width: 30%;
-            
+
             &__info {
                 padding-top: 0.5rem;
             }
         }
-        @include tablet{
+
+        @include tablet {
             width: 70%;
             @include flex(row);
             gap: 3rem;
             align-items: baseline;
             flex-wrap: nowrap;
-            &-container{
+
+            &-container {
                 width: 32%;
             }
 
@@ -350,11 +359,12 @@
         &-logo {
             padding-bottom: 0.5rem;
         }
-        @include tablet{
-            &-logo{
+
+        @include tablet {
+            &-logo {
                 display: none;
             }
         }
-        
+
     }
 }
