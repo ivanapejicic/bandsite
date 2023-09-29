@@ -52,8 +52,7 @@
 }
 
 .body-copy {
-    font-size: .8125rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
     font-weight: 400;
 
     @include tablet {
@@ -263,22 +262,33 @@
 
 
 .about {
+    @include padding-mobile;
+
+    @include tablet {
+        margin: 0 auto;
+        width: 80%;
+        @include padding-tablet-desktop;
+        padding-top: 0;
+    }
 
     &__title {
-        padding-top: .5rem;
-        padding-bottom: 1rem;
+        @include padding-between-mobile;
+        padding-top: 0;
+
+        @include tablet{
+            @include padding-between-tablet-desktop;
+        }
     }
 
     &__paragraphs {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 1.5rem;
+        
     }
 
     &__part1,
     &__part2 {
-        padding-bottom: 1rem;
-
         @include tablet {
             width: 47%;
         }
@@ -286,6 +296,11 @@
 }
 
 .photos {
+    @include padding-mobile;
+
+    @include tablet {
+        @include padding-tablet-desktop;
+    }
     background-color: $alabaster;
 
     &__header {
@@ -315,6 +330,11 @@
 }
 
 .footer {
+    @include padding-mobile;
+
+    @include tablet {
+        @include padding-tablet-desktop;
+    }
     background-color: $bandsite-black;
 
     padding-bottom: 1rem;
