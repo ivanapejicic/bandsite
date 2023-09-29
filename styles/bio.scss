@@ -61,9 +61,9 @@
         font-weight: 400;
     }
 
-    @include desktop {
-        font-size: 1.25rem;
-    }
+    // @include desktop {
+    //     font-size: 1.25rem;
+    // }
 }
 
 .footer-copy {
@@ -259,7 +259,7 @@
 
     &__subsubheader {
         @include tablet {
-            font-size: 1rem;
+            font-size: 1.25rem;
             font-weight: 500;
         }
     }

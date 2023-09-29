@@ -81,11 +81,6 @@
     font-weight: 400;
   }
 }
-@media screen and (min-width: 1024px) {
-  .body-copy {
-    font-size: 1.25rem;
-  }
-}
 
 .footer-copy {
   font-size: 0.8125rem;
@@ -295,7 +290,7 @@
 }
 @media screen and (min-width: 768px) {
   .moto__subsubheader {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 500;
   }
 }
