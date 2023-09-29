@@ -336,11 +336,17 @@
 }
 @media screen and (min-width: 768px) {
   .photos__header {
+    padding: 1.125rem 0;
+    padding-left: 0.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .photos__header {
     padding-left: 4rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .photos__container {
+  .photos__content {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -354,8 +360,15 @@
 }
 @media screen and (min-width: 768px) {
   .photos__img {
+    width: 33%;
+    padding: 1.125rem 0;
+    padding: 0.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .photos__img {
     width: 30%;
-    padding: 1.25rem;
+    padding: 1rem;
   }
 }
 

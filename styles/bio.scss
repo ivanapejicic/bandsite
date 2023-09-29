@@ -305,11 +305,15 @@
 
     &__header {
         @include tablet {
+            @include padding-between-tablet-desktop;
+            padding-left: .5rem;
+        }
+        @include desktop{
             padding-left: 4rem;
         }
     }
 
-    &__container {
+    &__content {
         @include tablet {
             @include flex(row);
             flex-wrap: wrap;
@@ -321,8 +325,13 @@
         padding-bottom: 1rem;
 
         @include tablet {
+            width: 33%;
+            @include padding-between-tablet-desktop;
+            padding: .5rem;
+        }
+        @include desktop{
             width: 30%;
-            padding: 1.25rem;
+            padding: 1rem;
         }
     }
 
