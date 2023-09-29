@@ -39,7 +39,7 @@
 }
 
 .subheader {
-    font-size: .875rem;
+    font-size: 1.125rem;
     line-height: 1.375rem;
     font-weight: 600;
 
@@ -56,9 +56,13 @@
     font-weight: 400;
 
     @include tablet {
-        font-size: .875rem;
+        font-size: 1rem;
         line-height: 1.375rem;
         font-weight: 400;
+    }
+
+    @include desktop {
+        font-size: 1.25rem;
     }
 }
 
@@ -211,6 +215,7 @@
 
     @include tablet {
         @include padding-tablet-desktop;
+        padding-bottom: 0;
     }
 
     &__content {
@@ -275,7 +280,7 @@
         @include padding-between-mobile;
         padding-top: 0;
 
-        @include tablet{
+        @include tablet {
             @include padding-between-tablet-desktop;
         }
     }
@@ -284,7 +289,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 1.5rem;
-        
+
     }
 
     &__part1,
@@ -301,14 +306,18 @@
     @include tablet {
         @include padding-tablet-desktop;
     }
+
     background-color: $alabaster;
 
     &__header {
+        @include padding-between-mobile;
+        padding-top: 0;
         @include tablet {
             @include padding-between-tablet-desktop;
             padding-left: .5rem;
         }
-        @include desktop{
+
+        @include desktop {
             padding-left: 4rem;
         }
     }
@@ -329,7 +338,8 @@
             @include padding-between-tablet-desktop;
             padding: .5rem;
         }
-        @include desktop{
+
+        @include desktop {
             width: 30%;
             padding: 1rem;
         }
@@ -344,6 +354,7 @@
     @include tablet {
         @include padding-tablet-desktop;
     }
+
     background-color: $bandsite-black;
 
     padding-bottom: 1rem;
