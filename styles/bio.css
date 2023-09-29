@@ -38,6 +38,11 @@
     font-weight: 500;
   }
 }
+@media screen and (min-width: 1024px) {
+  .page-header {
+    font-size: 4.25rem;
+  }
+}
 
 .section-header {
   font-size: 1.5rem;
@@ -197,6 +202,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  align-items: flex-start;
 }
 .hero__img {
   background-image: url("../assets/images/hero-bio.jpg");
@@ -208,7 +215,7 @@
   position: absolute;
   z-index: 1;
 }
-.hero__container {
+.hero__content {
   background-color: #323232;
   opacity: 50%;
   height: 50vw;
@@ -226,6 +233,11 @@
 @media screen and (min-width: 768px) {
   .hero__title {
     padding-left: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__title {
+    padding-left: 6rem;
   }
 }
 

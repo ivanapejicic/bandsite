@@ -19,6 +19,11 @@
         line-height: 4.25rem;
         font-weight: 500;
     }
+
+    @include desktop {
+        font-size: 4.25rem;
+        ;
+    }
 }
 
 .section-header {
@@ -85,7 +90,8 @@
 .header {
     background-color: $bandsite-black;
     padding-top: 1rem;
-    @include tablet{
+
+    @include tablet {
         padding: 0;
     }
 
@@ -164,9 +170,8 @@
 
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex(column);
+    align-items: flex-start;
 
     &__img {
         @include background('../assets/images/hero-bio.jpg');
@@ -176,7 +181,7 @@
         z-index: 1;
     }
 
-    &__container {
+    &__content{
         background-color: $bandsite-black;
         opacity: 50%;
         height: 50vw;
@@ -194,6 +199,10 @@
 
         @include tablet {
             padding-left: 4rem;
+        }
+
+        @include desktop {
+            padding-left: 6rem;
         }
     }
 }
