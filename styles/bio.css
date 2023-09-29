@@ -242,49 +242,59 @@
 }
 
 .moto {
-  padding: 1.5rem 1rem 0 1rem;
-}
-@media screen and (min-width: 1024px) {
-  .moto {
-    padding: 3rem 2.25rem 0 2.25rem;
-  }
-}
-.moto__img {
-  width: 100%;
-  padding-bottom: 1rem;
+  padding: 1.5rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
-  .moto__img {
-    padding-bottom: 2.25rem;
+  .moto {
+    padding: 3rem 2.25rem 2.25rem;
   }
+}
+.moto__content {
+  padding: 0.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .moto__content {
+    margin: 0 auto;
+    width: 80%;
+    padding: 1.125rem 0;
+  }
+}
+.moto__content-img {
+  padding: 0.5rem 0;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .moto__content-img {
+    height: 25em;
+    padding: 1.125rem 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .moto__content-img {
+    height: 35em;
+    padding: 1.125rem 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .moto__content-text {
+    width: 80%;
+  }
+}
+.moto__subheader {
+  padding: 0.5rem 0;
 }
 @media screen and (min-width: 768px) {
   .moto__subheader {
-    width: 80%;
-    padding-bottom: 1rem;
+    padding: 1.125rem 0;
   }
-}
-.moto__subsubheader {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .moto__subsubheader {
     font-size: 1rem;
-    line-height: 2rem;
     font-weight: 500;
   }
 }
 
-.about {
-  padding: 1.5rem 1rem 0 1rem;
-}
-@media screen and (min-width: 1024px) {
-  .about {
-    padding: 3rem 2.25rem 0 2.25rem;
-  }
-}
 .about__title {
   padding-top: 0.5rem;
   padding-bottom: 1rem;
@@ -304,13 +314,7 @@
 }
 
 .photos {
-  padding: 1.5rem 1rem 0 1rem;
   background-color: #FAFAFA;
-}
-@media screen and (min-width: 1024px) {
-  .photos {
-    padding: 3rem 2.25rem 0 2.25rem;
-  }
 }
 @media screen and (min-width: 768px) {
   .photos__header {
@@ -339,15 +343,9 @@
 
 .footer {
   background-color: #323232;
-  padding: 1.5rem 1rem 0 1rem;
   padding-bottom: 1rem;
   color: #FFFFFF;
   width: 100%;
-}
-@media screen and (min-width: 1024px) {
-  .footer {
-    padding: 3rem 2.25rem 0 2.25rem;
-  }
 }
 .footer__top {
   display: flex;
