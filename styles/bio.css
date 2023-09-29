@@ -108,6 +108,11 @@
   background-color: #323232;
   padding-top: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0;
+  }
+}
 .header__logo {
   max-height: 20px;
   max-width: 120px;
@@ -129,8 +134,8 @@
   justify-content: center;
   align-items: center;
   justify-content: flex-end;
-  gap: 1rem;
-  height: 9vh;
+  gap: 0.5rem;
+  height: 8vh;
 }
 @media screen and (min-width: 768px) {
   .header__nav {
@@ -139,8 +144,9 @@
     justify-content: center;
     align-items: center;
     justify-content: flex-start;
-    height: 6vh;
-    padding: 0 2.25rem;
+    height: 8vh;
+    gap: 1rem;
+    padding: 0 2.5rem;
   }
 }
 .header__link {
@@ -172,7 +178,7 @@
   .header__list-item {
     width: auto;
     height: 100%;
-    margin: 0 2.25rem;
+    margin: 0 1.25rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
