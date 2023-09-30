@@ -83,7 +83,7 @@
 }
 
 .footer-copy {
-  font-size: 1.5rem;
+  font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
 }
@@ -139,7 +139,7 @@
     justify-content: center;
     align-items: center;
     justify-content: flex-start;
-    height: 6vh;
+    height: 8vh;
     gap: 1rem;
     padding: 0 2.5rem;
   }
@@ -373,6 +373,7 @@
   background-color: #323232;
   padding-bottom: 1rem;
   color: #FFFFFF;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .footer {
@@ -406,6 +407,7 @@
   justify-content: center;
   align-items: center;
   align-items: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
@@ -415,16 +417,27 @@
     justify-content: center;
     align-items: center;
     align-items: baseline;
-    gap: 3rem;
+    flex-wrap: nowrap;
   }
 }
-.footer__left-logos {
+.footer__left-social {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0.5rem;
-  gap: 2rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.footer__left-social__logo {
+  padding-right: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__left-social {
+    padding: 0.5rem 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__left-social {
+    padding: 1rem 6rem;
+  }
 }
 .footer__content-info {
   display: flex;
@@ -443,6 +456,10 @@
 .footer__content-info__address, .footer__content-info__email {
   padding-bottom: 1rem;
 }
+.footer__content-info__email {
+  color: #FAFAFA;
+  text-decoration: none;
+}
 @media screen and (min-width: 768px) {
   .footer__content {
     display: flex;
@@ -452,7 +469,7 @@
     align-items: baseline;
     justify-content: space-between;
     padding: 1rem 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   .footer__content-info {
     width: 31%;
@@ -460,7 +477,7 @@
 }
 @media screen and (min-width: 1024px) {
   .footer__content {
-    width: 85%;
+    width: 82%;
     padding-left: 5rem;
   }
 }
@@ -476,6 +493,8 @@
     display: none;
   }
 }
-.footer__bottom-copyright {
-  padding-left: 5rem;
+@media screen and (min-width: 1024px) {
+  .footer__bottom-copyright {
+    padding-left: 5rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

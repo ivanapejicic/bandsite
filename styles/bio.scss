@@ -67,7 +67,7 @@
 }
 
 .footer-copy {
-    font-size: 1.5rem;
+    font-size: .8125rem;
     line-height: 1.125rem;
     font-weight: 400;
 
@@ -113,7 +113,7 @@
         @include tablet {
             @include flex(row);
             justify-content: flex-start;
-            height: 6vh;
+            height: 8vh;
             gap: 1rem;
             padding: 0 2.5rem;
         }
@@ -348,20 +348,18 @@
     @include tablet {
         @include padding-tablet-desktop;
     }
-
     background-color: $bandsite-black;
     padding-bottom: 1rem;
     color: $white;
+    width: 100%;
 
     &__top {
-
         @include tablet {
             display: flex;
             align-items: baseline;
             justify-content: space-between;
             padding: 0 0rem;
         }
-
         @include desktop {
             padding: 0 5rem;
         }
@@ -378,19 +376,30 @@
     &__left {
         @include flex(column);
         align-items: flex-start;
+        justify-content: space-between;
         flex-wrap: wrap;
 
         @include tablet {
             @include flex(row);
             align-items: baseline;
-            gap: 3rem;
-
+            // justify-content: space-between;
+            flex-wrap: nowrap;
         }
-
-        &-logos {
-            @include flex(row);
-            padding: 1rem .5rem;
-            gap: 2rem;
+        
+        &-social {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 1rem 0;
+            &__logo{
+                padding-right: 2rem;
+            }
+            @include tablet{
+                padding: 0.5rem 2rem;
+            }
+            @include desktop{
+                padding: 1rem 6rem;
+            }
         }
     }
 
@@ -412,6 +421,11 @@
             &__email {
                 padding-bottom: 1rem;
             }
+            &__email{
+                color: $alabaster;
+                text-decoration: none;
+            }
+        
         }
 
         @include tablet {
@@ -419,15 +433,15 @@
             align-items: baseline;
             justify-content: space-between;
             padding: 1rem 0;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
 
             &-info {
-                width: 31%;
+                width: 31%;     
             }
         }
 
         @include desktop {
-            width: 85%;
+            width: 82%;
             padding-left: 5rem;
         }
     }
@@ -444,118 +458,9 @@
             }
         }
         &-copyright{
-            padding-left: 5rem;
+            @include desktop{
+                padding-left: 5rem;
         }
     }
-
 }
-
-// &__top {
-//     // @include flex(row);
-//     // justify-content: space-between;
-
-//     // &-logoBandsite {
-//     //     display: none;
-//     // }
-
-//     &-left {
-//         // @include flex(column);
-//         // align-items: flex-start;
-//         &__title{
-//             width: 50%;
-//         }
-//         &__logos {
-//             @include flex(row);
-//             gap: 2rem;
-//             padding: 1rem 0;
-//         }
-
-//         @include tablet {
-//             @include flex(row);
-//             align-items: baseline;
-//             justify-content: flex-start;
-//             gap: 4rem;
-
-//             &-logoBandsite {
-//                 display: flex;
-//                 gap: 10rem;
-//             }
-
-//         }
-//     }
-//     &__logoBandsite{
-//         display: none;
-//     }
-
-// }
-
-// &__top-left {
-
-//     @include flex(column);
-//     align-items: flex-start;
-
-//     &__logos {
-//         @include flex(row);
-//         gap: 2rem;
-//         padding: 1rem 0;
-//     }
-
-//     &-logoBandsite {
-//         display: none;
-//     }
-
-//     @include tablet {
-//         @include flex(row);
-//         align-items: baseline;
-//         justify-content: flex-start;
-//         gap: 4rem;
-
-//         &-logoBandsite {
-//             display: flex;
-//             gap: 10rem;
-//         }
-
-//     }
-// }
-
-// &__contact {
-
-//     padding-top: 1rem;
-
-//     &-container {
-//         padding-bottom: 1rem;
-//         width: 30%;
-
-//         &__info {
-//             padding-top: 0.5rem;
-//         }
-//     }
-
-//     @include tablet {
-//         width: 70%;
-//         @include flex(row);
-//         gap: 3rem;
-//         align-items: baseline;
-//         flex-wrap: nowrap;
-
-//         &-container {
-//             width: 32%;
-//         }
-
-//     }
-// }
-
-// &__bottom {
-//     padding-top: 2rem;
-
-//     &-logo {
-//         padding-bottom: 0.5rem;
-//     }
-
-//     @include tablet {
-//         &-logo {
-//             display: none;
-//         }
-//     }
-
-// }
+}
