@@ -67,12 +67,12 @@
 }
 
 .footer-copy {
-    font-size: .8125rem;
+    font-size: 1rem;
     line-height: 1.125rem;
     font-weight: 400;
 
     @include tablet {
-        font-size: .875rem;
+        font-size: 1rem;
         line-height: 1.25rem;
         font-weight: 400;
     }
@@ -305,6 +305,7 @@
     &__header {
         @include padding-between-mobile;
         padding-top: 0;
+
         @include tablet {
             @include padding-between-tablet-desktop;
             padding-left: .5rem;
@@ -349,88 +350,195 @@
     }
 
     background-color: $bandsite-black;
-
     padding-bottom: 1rem;
     color: $white;
     width: 100%;
 
     &__top {
-        @include flex(row);
-        justify-content: space-between;
+        box-sizing: border-box;
+        width: 100%;
+        @include tablet {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 0 0rem;
+        }
 
-        &-logoBandsite {
-            display: none;
+        @include desktop {
+            padding: 0 5rem;
         }
     }
 
-    &__top-left {
+    &__right {
+        display: none;
 
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &__left {
         @include flex(column);
         align-items: flex-start;
-
-        &__logos {
-            @include flex(row);
-            gap: 2rem;
-            padding: 1rem 0;
-        }
-
-        &-logoBandsite {
-            display: none;
-        }
+        flex-wrap: wrap;
 
         @include tablet {
             @include flex(row);
             align-items: baseline;
-            justify-content: flex-start;
-            gap: 4rem;
-
-            &-logoBandsite {
-                display: flex;
-                gap: 10rem;
-            }
-
-        }
-    }
-
-    &__contact {
-
-        padding-top: 1rem;
-
-        &-container {
-            padding-bottom: 1rem;
-            width: 30%;
-
-            &__info {
-                padding-top: 0.5rem;
-            }
-        }
-
-        @include tablet {
-            width: 70%;
-            @include flex(row);
             gap: 3rem;
+
+        }
+
+        &-logos {
+            @include flex(row);
+            padding: 1rem;
+            gap: 2rem;
+        }
+    }
+    &__content{
+        &-info{
+            @include flex(column);
+            align-items: flex-start;
+            justify-content: baseline;
+            padding: .5rem 0;
+            
+            
+            &__name{
+                font-weight: 500;
+                padding-bottom: 1rem;
+                white-space: nowrap;
+            }
+            &__address,
+            &__email{
+                padding-bottom: 1rem;
+            }
+        }
+        @include tablet{
+            @include flex(row);
             align-items: baseline;
-            flex-wrap: nowrap;
-
-            &-container {
-                width: 32%;
-            }
-
-        }
-    }
-
-    &__bottom {
-        padding-top: 2rem;
-
-        &-logo {
-            padding-bottom: 0.5rem;
-        }
-
-        @include tablet {
-            &-logo {
-                display: none;
+            justify-content: space-between;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+            
+            &-info{
+                width: 31%;
             }
         }
 
+        @include desktop{
+            width: 85%;
+            padding-left: 5rem;
+        }
     }
+
 }
+
+// &__top {
+//     // @include flex(row);
+//     // justify-content: space-between;
+
+//     // &-logoBandsite {
+//     //     display: none;
+//     // }
+
+//     &-left {
+//         // @include flex(column);
+//         // align-items: flex-start;
+//         &__title{
+//             width: 50%;
+//         }
+//         &__logos {
+//             @include flex(row);
+//             gap: 2rem;
+//             padding: 1rem 0;
+//         }
+
+//         @include tablet {
+//             @include flex(row);
+//             align-items: baseline;
+//             justify-content: flex-start;
+//             gap: 4rem;
+
+//             &-logoBandsite {
+//                 display: flex;
+//                 gap: 10rem;
+//             }
+
+//         }
+//     }
+//     &__logoBandsite{
+//         display: none;
+//     }
+
+// }
+
+// &__top-left {
+
+//     @include flex(column);
+//     align-items: flex-start;
+
+//     &__logos {
+//         @include flex(row);
+//         gap: 2rem;
+//         padding: 1rem 0;
+//     }
+
+//     &-logoBandsite {
+//         display: none;
+//     }
+
+//     @include tablet {
+//         @include flex(row);
+//         align-items: baseline;
+//         justify-content: flex-start;
+//         gap: 4rem;
+
+//         &-logoBandsite {
+//             display: flex;
+//             gap: 10rem;
+//         }
+
+//     }
+// }
+
+// &__contact {
+
+//     padding-top: 1rem;
+
+//     &-container {
+//         padding-bottom: 1rem;
+//         width: 30%;
+
+//         &__info {
+//             padding-top: 0.5rem;
+//         }
+//     }
+
+//     @include tablet {
+//         width: 70%;
+//         @include flex(row);
+//         gap: 3rem;
+//         align-items: baseline;
+//         flex-wrap: nowrap;
+
+//         &-container {
+//             width: 32%;
+//         }
+
+//     }
+// }
+
+// &__bottom {
+//     padding-top: 2rem;
+
+//     &-logo {
+//         padding-bottom: 0.5rem;
+//     }
+
+//     @include tablet {
+//         &-logo {
+//             display: none;
+//         }
+//     }
+
+// }
