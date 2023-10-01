@@ -39,5 +39,13 @@
 @mixin padding-between-tablet-desktop{
     padding: 1.125rem 0;
 }
+@mixin dark-background{
+    background-color: $bandsite-black;
+    color: $alabaster;
+}
+@mixin light-background{
+    background-color: $alabaster;
+    color: $bandsite-black;
+}
 
 

@@ -12,12 +12,12 @@
 .page-header {
     font-size: 1.75rem;
     line-height: 2rem;
-    font-weight: 600;
+    font-weight: $demi;
 
     @include tablet {
         font-size: 3.75rem;
         line-height: 4.25rem;
-        font-weight: 500;
+        font-weight: $demi;
     }
 
     @include desktop {
@@ -29,69 +29,65 @@
 .section-header {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 500;
+    font-weight: $demi;
 
     @include tablet {
         font-size: 2.25rem;
         line-height: 2.75rem;
-        font-weight: 500;
+        font-weight: $demi;
     }
 }
 
 .subheader {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.375rem;
-    font-weight: 500;
+    font-weight: $demi;
 
     @include tablet {
         font-size: 1.5rem;
         line-height: 2rem;
-        font-weight: 600;
+        font-weight: $demi;
     }
 
 }
 
 .body-copy {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: $regular;
 
     @include tablet {
         font-size: 1rem;
         line-height: 1.375rem;
-        font-weight: 400;
+        font-weight: $regular;
     }
-
-    // @include desktop {
-    //     font-size: 1.25rem;
-    // }
 }
 
 .footer-copy {
     font-size: .8125rem;
     line-height: 1.125rem;
-    font-weight: 400;
+    font-weight: $regular;
 
     @include tablet {
         font-size: 1rem;
-        line-height: 1.25rem;
-        font-weight: 400;
+        line-height: 1.2rem;
+        font-weight: $regular;
     }
 }
 
 .labels-buttons {
     font-size: .625rem;
     line-height: 1.25rem;
-    font-weight: 700;
+    font-weight: $bold;
 
     @include tablet {
         font-size: .75rem;
         line-height: 1.25rem;
-        font-weight: 700;
+        font-weight: $bold;
     }
 }
 
 .header {
-    background-color: $bandsite-black;
+    @include dark-background;
 
     @include tablet {
         padding: 0;
@@ -99,6 +95,7 @@
 
     &__logo {
         padding: 1rem;
+        padding-bottom: 0.5rem;
 
         @include desktop {
             margin-left: 4.25rem;
@@ -113,9 +110,13 @@
         @include tablet {
             @include flex(row);
             justify-content: flex-start;
-            height: 8vh;
+            height: 7vh;
             gap: 1rem;
             padding: 0 2.5rem;
+        }
+        @include desktop{
+            gap: 0;
+            height: 6vh;
         }
     }
 
@@ -157,7 +158,7 @@
             }
 
             &.current {
-                font-weight: 600;
+                font-weight: $demi;
             }
         }
     }
@@ -203,13 +204,18 @@
 }
 
 .moto {
+    color: $bandsite-black;
     @include padding-mobile;
 
     @include tablet {
         @include padding-tablet-desktop;
         padding-bottom: 0;
     }
-
+    &__title{
+        @include desktop{
+            padding-left :4rem;
+        }
+    }
     &__content {
         @include padding-between-mobile;
 
@@ -222,6 +228,7 @@
         &-img {
             @include padding-between-mobile;
             width: 100%;
+            height: 60vw;
 
             @include tablet {
                 height: 25em;
@@ -243,6 +250,7 @@
 
     &__subheader {
         @include padding-between-mobile;
+        font-weight: 500;
 
         @include tablet {
             @include padding-between-tablet-desktop;
@@ -250,9 +258,10 @@
     }
 
     &__subsubheader {
+        font-weight: 500;
+
         @include tablet {
             font-size: 1.25rem;
-            // font-weight: 400;
         }
     }
 }
@@ -287,6 +296,7 @@
 
     &__part1,
     &__part2 {
+        color: $bandsite-black;
         @include tablet {
             width: 47%;
         }
@@ -300,7 +310,7 @@
         @include padding-tablet-desktop;
     }
 
-    background-color: $alabaster;
+    @include light-background;
 
     &__header {
         @include padding-between-mobile;
@@ -329,7 +339,6 @@
 
         @include tablet {
             width: 33%;
-            @include padding-between-tablet-desktop;
             padding: .5rem;
         }
 
@@ -344,13 +353,14 @@
 
 .footer {
     @include padding-mobile;
+    
 
     @include tablet {
         @include padding-tablet-desktop;
     }
-    background-color: $bandsite-black;
+
+    @include dark-background;
     padding-bottom: 1rem;
-    color: $white;
     width: 100%;
 
     &__top {
@@ -360,6 +370,7 @@
             justify-content: space-between;
             padding: 0 0rem;
         }
+
         @include desktop {
             padding: 0 5rem;
         }
@@ -385,19 +396,22 @@
             // justify-content: space-between;
             flex-wrap: nowrap;
         }
-        
+
         &-social {
             display: flex;
             align-items: baseline;
             justify-content: space-between;
             padding: 1rem 0;
-            &__logo{
+
+            &__logo {
                 padding-right: 2rem;
             }
-            @include tablet{
+
+            @include tablet {
                 padding: 0.5rem 2rem;
             }
-            @include desktop{
+
+            @include desktop {
                 padding: 1rem 6rem;
             }
         }
@@ -421,11 +435,12 @@
             &__email {
                 padding-bottom: 1rem;
             }
-            &__email{
+
+            &__email {
                 color: $alabaster;
                 text-decoration: none;
             }
-        
+
         }
 
         @include tablet {
@@ -436,7 +451,7 @@
             flex-wrap: nowrap;
 
             &-info {
-                width: 31%;     
+                width: 31%;
             }
         }
 
@@ -446,21 +461,23 @@
         }
     }
 
-    &__bottom{
+    &__bottom {
 
         padding: 2rem 0 1rem;
 
-        &-logo{
+        &-logo {
             display: flex;
             padding: 0.5rem 0;
-            @include tablet{
+
+            @include tablet {
                 display: none;
             }
         }
-        &-copyright{
-            @include desktop{
+
+        &-copyright {
+            @include desktop {
                 padding-left: 5rem;
+            }
         }
     }
-}
 }
