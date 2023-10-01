@@ -393,7 +393,7 @@
         @include tablet {
             @include flex(row);
             align-items: baseline;
-            // justify-content: space-between;
+            justify-content: space-between;
             flex-wrap: nowrap;
         }
 
@@ -408,7 +408,7 @@
             }
 
             @include tablet {
-                padding: 0.5rem 2rem;
+                padding: 0.5rem 3rem;
             }
 
             @include desktop {
