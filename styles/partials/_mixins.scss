@@ -28,21 +28,25 @@
 }
 
 @mixin padding-mobile{
-    padding: 1.5rem 1rem 0rem;
+    padding: 1.5rem 1rem 1rem;
 }
+
 @mixin padding-between-mobile{
-    padding: .75rem 0;
+    padding: 1rem 0;
 }
+
 @mixin padding-tablet-desktop{
     padding: 3rem 2.25rem 2.25rem;
 }
 @mixin padding-between-tablet-desktop{
     padding: 1.125rem 0;
 }
+
 @mixin dark-background{
     background-color: $bandsite-black;
     color: $white;
 }
+
 @mixin light-background{
     background-color: $alabaster;
     color: $bandsite-black;
