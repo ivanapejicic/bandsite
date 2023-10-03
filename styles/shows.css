@@ -1,1 +1,251 @@
-/*# sourceMappingURL=shows.css.map */
+/* primary colors */
+/* secondary colors */
+/* breakpoints */
+/* Variables for font weights */
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("ttf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("ttf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("ttf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
+  font-weight: 700;
+}
+* {
+  font-family: "Avenir Next", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page-header {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .page-header {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .page-header {
+    font-size: 4.25rem;
+  }
+}
+
+.section-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .section-header {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+  }
+}
+
+.subheader {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .subheader {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+}
+
+.body-copy {
+  font-size: 1rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .body-copy {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+
+.footer-copy {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .footer-copy {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 400;
+  }
+}
+
+.labels-buttons {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .labels-buttons {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+.header {
+  background-color: #323232;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0;
+  }
+}
+.header__logo {
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .header__logo {
+    margin-left: 4.25rem;
+    margin-right: 2.25rem;
+  }
+}
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    height: 8vh;
+    gap: 1rem;
+    padding: 0 2.5rem;
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__nav {
+    gap: 0;
+  }
+}
+.header__link {
+  text-decoration: none;
+  color: #AFAFAF;
+}
+.header__link.current, .header__link:hover {
+  color: #FFFFFF;
+}
+.header__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header__list {
+    justify-content: flex-start;
+    height: 100%;
+  }
+}
+.header__list-item {
+  padding-bottom: 0.75rem;
+  width: 50vw;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .header__list-item {
+    width: auto;
+    height: 100%;
+    margin: 0 1.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+  }
+}
+.header__list-item.current, .header__list-item:hover {
+  border-bottom: 0.1875rem solid #FFFFFF;
+}
+.header__list-item.current {
+  font-weight: 600;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+}
+.hero__img {
+  height: 50vw;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.hero__content {
+  background-color: #323232;
+  opacity: 50%;
+  height: 50vw;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.hero__title {
+  color: #FFFFFF;
+  margin: 0;
+  position: absolute;
+  z-index: 3;
+  padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    padding-left: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__title {
+    padding-left: 6rem;
+  }
+}
+
+* {
+  font-family: "Avenir Next", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero__img {
+  background-image: url("../assets/images/hero-shows.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}/*# sourceMappingURL=shows.css.map */

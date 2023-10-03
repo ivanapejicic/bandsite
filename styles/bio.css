@@ -205,10 +205,6 @@
   align-items: flex-start;
 }
 .hero__img {
-  background-image: url("../assets/images/hero-bio.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 50vw;
   width: 100%;
   position: absolute;
@@ -238,6 +234,20 @@
   .hero__title {
     padding-left: 6rem;
   }
+}
+
+* {
+  font-family: "Avenir Next", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero__img {
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .moto {
