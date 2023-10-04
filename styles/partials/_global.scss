@@ -2,13 +2,6 @@
 @use "../partials/typography" as *;
 @use "../partials/variables" as *;
 
-* {
-    font-family: 'Avenir Next', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 .page-header {
     font-size: 1.75rem;
     line-height: 2rem;
@@ -74,20 +67,18 @@
 }
 
 .labels-buttons {
-    font-size: .625rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
-    font-weight: $bold;
+    font-weight: $demi;
 
     @include tablet {
-        font-size: .75rem;
+        font-size: 1rem;
         line-height: 1.25rem;
-        font-weight: $bold;
+        font-weight: $demi;
     }
 }
 
 .header {
-    @include dark-background;
-
     @include tablet {
         padding: 0;
     }
@@ -103,6 +94,7 @@
     }
 
     &__nav {
+        @include dark-background;
         @include flex(column);
         justify-content: flex-end;
 
@@ -114,14 +106,15 @@
             padding: 0 2.5rem;
             font-size: 1.25rem;
         }
-        @include desktop{
+
+        @include desktop {
             gap: 0;
         }
     }
 
     &__link {
         text-decoration: none;
-        color: $silver;
+        color: $mercury;
 
         &.current,
         &:hover {
@@ -161,40 +154,171 @@
             }
         }
     }
+    &__hero {
+        @include flex(column);
+        align-items: flex-start;
+    
+        &-img {
+            height: 50vw;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+    
+        &-content {
+            background-color: $bandsite-black;
+            opacity: 50%;
+            height: 50vw;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+    
+        &-title {
+            color: $white;
+            margin: 0;
+            position: absolute;
+            z-index: 3;
+            padding-left: 1rem;
+    
+            @include tablet {
+                padding-left: 4rem;
+            }
+    
+            @include desktop {
+                padding-left: 6rem;
+            }
+        }
+    }
+
 }
-.hero {
-    @include flex(column);
-    align-items: flex-start;
 
-    &__img {
-        height: 50vw;
-        width: 100%;
-        position: absolute;
-        z-index: 1;
+.footer {
+    @include padding-mobile;
+
+    @include tablet {
+        @include padding-tablet-desktop;
     }
 
-    &__content {
-        background-color: $bandsite-black;
-        opacity: 50%;
-        height: 50vw;
-        width: 100%;
-        position: relative;
-        z-index: 2;
-    }
+    @include dark-background;
+    padding-bottom: 1rem;
+    width: 100%;
 
-    &__title {
-        color: $white;
-        margin: 0;
-        position: absolute;
-        z-index: 3;
-        padding-left: 1rem;
-
+    &__top {
         @include tablet {
-            padding-left: 4rem;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
         }
 
         @include desktop {
-            padding-left: 6rem;
+            padding: 0 5rem;
+        }
+    }
+
+    &__right {
+        display: none;
+
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &__left {
+        @include flex(column);
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include tablet {
+            @include flex(row);
+            align-items: baseline;
+            justify-content:baseline;
+            flex-wrap: nowrap;
+        }
+
+        &-social {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 1rem 0;
+
+            &__logo {
+                padding-right: 2rem;
+            }
+
+            @include tablet {
+                padding: 0.5rem 2rem;
+            }
+
+            @include desktop {
+                padding: 1rem 3rem;
+            }
+        }
+    }
+
+    &__content {
+        &-info {
+            @include flex(column);
+            align-items: flex-start;
+            justify-content: baseline;
+            padding: .5rem 0;
+
+
+            &__name {
+                font-weight: 500;
+                padding-bottom: 1rem;
+                white-space: nowrap;
+            }
+
+            &__address,
+            &__email {
+                padding-bottom: 1rem;
+            }
+
+            &__email {
+                color: $alabaster;
+                text-decoration: none;
+            }
+
+        }
+
+        @include tablet {
+            @include flex(row);
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 1rem 0;
+            flex-wrap: nowrap;
+
+            &-info {
+                width: 31%;
+            }
+        }
+
+        @include desktop {
+            width: 82%;
+            padding-left: 5rem;
+        }
+    }
+
+    &__bottom {
+
+        padding: 2rem 0 1rem;
+
+        &-logo {
+            display: flex;
+            padding: 0.5rem 0;
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        &-copyright {
+            @include desktop {
+                padding-left: 5rem;
+            }
         }
     }
 }
+
