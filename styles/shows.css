@@ -4,20 +4,18 @@
 /* Variables for font weights */
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("ttf");
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("ttf");
+  src: url("../../assets/fonts/AlternativeFiles/AvenirNextLTPro.ttf") format("otf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("ttf");
-  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("otf");
+  src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("ttf"), url("../../assets/fonts/AlternativeFiles/AvenirNextLTProDemi.ttf") format("otf");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("ttf");
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
+  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("ttf"), url("../../assets/fonts/AlternativeFiles/AvenirNextLTProBold.ttf") format("otf");
   font-weight: 700;
 }
 .page-header {
@@ -32,7 +30,7 @@
     font-weight: 600;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .page-header {
     font-size: 4.25rem;
   }
@@ -111,7 +109,7 @@
   padding: 1rem;
   padding-bottom: 0.5rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .header__logo {
     margin-left: 4.25rem;
     margin-right: 2.25rem;
@@ -139,7 +137,7 @@
     font-size: 1.25rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .header__nav {
     gap: 0;
   }
@@ -193,20 +191,20 @@
   justify-content: center;
   align-items: center;
   align-items: flex-start;
+  position: relative;
 }
 .header__hero-img {
   height: 50vw;
   width: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 }
 .header__hero-content {
   background-color: #323232;
-  opacity: 50%;
   height: 50vw;
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 .header__hero-title {
   color: #FFFFFF;
@@ -220,7 +218,7 @@
     padding-left: 4rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .header__hero-title {
     padding-left: 6rem;
   }
@@ -245,7 +243,7 @@
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .footer__top {
     padding: 0 5rem;
   }
@@ -292,7 +290,7 @@
     padding: 0.5rem 2rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .footer__left-social {
     padding: 1rem 3rem;
   }
@@ -333,7 +331,7 @@
     width: 31%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .footer__content {
     width: 82%;
     padding-left: 5rem;
@@ -351,7 +349,7 @@
     display: none;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .footer__bottom-copyright {
     padding-left: 5rem;
   }
@@ -366,6 +364,8 @@
 
 .header__hero-img {
   background-image: url("../assets/images/hero-shows.jpg");
+  background-color: #323232;
+  opacity: 50%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -380,7 +380,7 @@
     padding: 1.5rem 1.125rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .concerts {
     padding: 1.5rem 4rem;
   }
@@ -416,7 +416,7 @@
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .concerts__content-container {
     width: 75%;
     margin-left: auto;

@@ -79,6 +79,7 @@
 
 
 .about {
+    background-color: $white;
     @include padding-mobile;
 
     @include tablet {
