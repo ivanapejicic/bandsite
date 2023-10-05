@@ -103,25 +103,14 @@
             <h2 class="join__title section-header">Join the Conversation</h2>
             <div class="join__content">
                 <div class="join__content-top">
-                    <img class="join__content-top__avatar" src="./assets/images/Mohan-muruge.jpg" alt="head shot of Mohan">
+                    <img class="join__content-top__avatar" src="./assets/images/Mohan-muruge.jpg"
+                        alt="head shot of Mohan">
                     <form class="join__content-top__form" novalidate>
-                        <div>
-                            <div>
-                                <label for="nameInput" class="label">NAME</label>
-                            </div>
-                            <input type="text" id="nameInput" placeholder="Enter your name">
-                        </div>
-
-                        <div>
-                            <div>
-                                <label for="textInput" class="label">COMMENT</label>
-                            </div>
-                            <textarea id="textInput" placeholder="Add a new comment"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="button">COMMENT</button>
-
-                        </div>
+                        <label for="nameInput" class="label">NAME</label>
+                        <input type="text" class="form-field" id="nameInput" placeholder="Enter your name">
+                        <label for="textInput" class="label">COMMENT</label>
+                        <textarea id="textInput" class="form-field" rows="5" placeholder="Add a new comment"></textarea>
+                        <button type="submit" class="button">COMMENT</button>
                     </form>
                 </div>
                 <div class="join__content-comments"></div>

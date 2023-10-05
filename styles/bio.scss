@@ -201,11 +201,14 @@
             }
 
             &__avatar {
+                margin-top: 2.5rem;
                 @include avatar;
             }
             &__form{
                 width: 85vw;
-                @include flex(column);
+                display: flex;
+                flex-direction: column;
+            
             }
         }
 
