@@ -10,6 +10,11 @@
     box-sizing: border-box;
 }
 
+.body {
+    font-family: 'Avenir Next', sans-serif;
+    color: $bandsite-black;
+}
+
 .header__hero-img {
     @include background('../assets/images/hero-bio.jpg');
 }
@@ -163,6 +168,7 @@
 }
 
 .join {
+    width: 100%;
     box-sizing: border-box;
     @include padding-mobile;
 
@@ -173,53 +179,70 @@
     &__content {
         padding: 0 1rem;
         @include flex(column);
-        @include tablet{
+
+        @include tablet {
             width: 80%;
             margin: auto;
         }
-        @include desktop{
+
+        @include desktop {
             width: 40%;
         }
 
-        &-form {
-            padding: .1rem; //delete this at some point
+        &-top {
+            display: flex;
+            gap: 1rem;
+            padding: .5rem;
+            border-bottom: 1px solid $mercury;
+            width: 90vw;
+
+            @include tablet {
+                width: 60vw;
+            }
+
+            &__avatar {
+                @include avatar;
+            }
+            &__form{
+                width: 85vw;
+                @include flex(column);
+            }
         }
 
         &-comments {
             border-top: 1px solid $mercury;
+            @include flex(column);
 
             .comment {
                 display: flex;
-                justify-content: space-between;
-                padding: 0.5rem 0;
+                gap: 1rem;
+                padding: .5rem;
                 border-bottom: 1px solid $mercury;
+                width: 90vw;
+
+                @include tablet {
+                    width: 60vw;
+                }
 
                 &__avatar {
-                    border-radius: 50%;
-                    background-color: $mercury;
-                    width: 2.8rem;                     //fix 
-                    max-height: 2.8rem;
-                    @include tablet{
-                        width: 4.25rem;
-                        height: 4.25rem;;
-                    }
-
+                    @include avatar;
                 }
 
                 &__obj {
-                    width: 80%;
+                    width: 85vw;
 
-                    &-top{
+                    &-top {
                         display: flex;
                         align-items: baseline;
                         justify-content: space-between;
                         padding-bottom: .5rem;
-                
-                        &__date{
-                            color: $silver;        // why so light
+
+                        &__date {
+                            color: $silver;
                         }
                     }
-                    &-bottom{
+
+                    &-bottom {
                         padding-bottom: .5rem;
                     }
                 }

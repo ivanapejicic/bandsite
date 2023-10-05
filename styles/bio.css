@@ -62,6 +62,12 @@
   }
 }
 
+.subheader-comments {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+}
+
 .body-copy {
   font-size: 1rem;
   font-weight: 400;
@@ -98,6 +104,11 @@
     line-height: 1.25rem;
     font-weight: 600;
   }
+}
+
+.label {
+  font-size: 0.5rem;
+  color: #AFAFAF;
 }
 
 @media screen and (min-width: 768px) {
@@ -371,6 +382,11 @@
   box-sizing: border-box;
 }
 
+.body {
+  font-family: "Avenir Next", sans-serif;
+  color: #323232;
+}
+
 .header__hero-img {
   background-image: url("../assets/images/hero-bio.jpg");
   background-color: #323232;
@@ -533,6 +549,7 @@
 }
 
 .join {
+  width: 100%;
   box-sizing: border-box;
   padding: 1.5rem 1rem 1rem;
 }
@@ -557,32 +574,62 @@
     width: 40%;
   }
 }
-.join__content-form {
-  padding: 0.1rem;
+.join__content-top {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #E1E1E1;
+  width: 90vw;
+}
+@media screen and (min-width: 768px) {
+  .join__content-top {
+    width: 60vw;
+  }
+}
+.join__content-top__avatar {
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  width: 12vw;
+  max-height: 12vw;
+  max-width: 2.25rem;
+  max-height: 2.25rem;
+}
+.join__content-top__form {
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .join__content-comments {
   border-top: 1px solid #E1E1E1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .join__content-comments .comment {
   display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 0;
+  gap: 1rem;
+  padding: 0.5rem;
   border-bottom: 1px solid #E1E1E1;
+  width: 90vw;
+}
+@media screen and (min-width: 768px) {
+  .join__content-comments .comment {
+    width: 60vw;
+  }
 }
 .join__content-comments .comment__avatar {
   border-radius: 50%;
   background-color: #E1E1E1;
-  width: 2.8rem;
-  max-height: 2.8rem;
-}
-@media screen and (min-width: 768px) {
-  .join__content-comments .comment__avatar {
-    width: 4.25rem;
-    height: 4.25rem;
-  }
+  width: 12vw;
+  max-height: 12vw;
+  max-width: 2.25rem;
+  max-height: 2.25rem;
 }
 .join__content-comments .comment__obj {
-  width: 80%;
+  width: 85vw;
 }
 .join__content-comments .comment__obj-top {
   display: flex;

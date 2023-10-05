@@ -31,7 +31,7 @@ function displayComment(comment) {
     const objTop = document.createElement("div");
     objTop.className = "comment__obj-top";
     const name = document.createElement("h3");
-    name.className = "commen__obj-top__name subheader";
+    name.className = "commen__obj-top__name subheader-comments";
     name.textContent = comment.name;
     objTop.appendChild(name);
     const date = document.createElement("p");

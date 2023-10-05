@@ -29,29 +29,37 @@
     align-items: center;
 }
 
-@mixin padding-mobile{
+@mixin avatar {
+    border-radius: 50%;
+    background-color: $mercury;
+    width: 12vw;
+    max-height: 12vw;
+    max-width: 2.25rem;
+    max-height: 2.25rem;
+}
+
+@mixin padding-mobile {
     padding: 1.5rem 1rem 1rem;
 }
 
-@mixin padding-between-mobile{
+@mixin padding-between-mobile {
     padding: 1rem 0;
 }
 
-@mixin padding-tablet-desktop{
+@mixin padding-tablet-desktop {
     padding: 3rem 2.25rem 2.25rem;
 }
-@mixin padding-between-tablet-desktop{
+
+@mixin padding-between-tablet-desktop {
     padding: 1.125rem 0;
 }
 
-@mixin dark-background{
+@mixin dark-background {
     background-color: $bandsite-black;
     color: $white;
 }
 
-@mixin light-background{
+@mixin light-background {
     background-color: $alabaster;
     color: $bandsite-black;
 }
-
-
