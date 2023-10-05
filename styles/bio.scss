@@ -186,7 +186,7 @@
             margin: auto;
         }
         @include desktop {
-            width: 40%;
+            width: 30%;
         }
 
         &-top {
@@ -198,6 +198,9 @@
 
             @include tablet {
                 width: 60vw;
+            }
+            @include desktop {
+                width: 40vw;
             }
 
             &__avatar {
@@ -225,6 +228,9 @@
 
                 @include tablet {
                     width: 60vw;
+                }
+                @include desktop {
+                    width: 40vw;
                 }
 
                 &__avatar {

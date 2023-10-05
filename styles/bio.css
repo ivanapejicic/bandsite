@@ -615,7 +615,7 @@
 }
 @media screen and (min-width: 1920px) {
   .join__content {
-    width: 40%;
+    width: 30%;
   }
 }
 .join__content-top {
@@ -628,6 +628,11 @@
 @media screen and (min-width: 768px) {
   .join__content-top {
     width: 60vw;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .join__content-top {
+    width: 40vw;
   }
 }
 .join__content-top__avatar {
@@ -661,6 +666,11 @@
 @media screen and (min-width: 768px) {
   .join__content-comments .comment {
     width: 60vw;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .join__content-comments .comment {
+    width: 40vw;
   }
 }
 .join__content-comments .comment__avatar {
