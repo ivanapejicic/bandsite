@@ -74,12 +74,12 @@
 .labels-buttons {
     font-size: 1.25rem;
     line-height: 1.25rem;
-    font-weight: $demi;
+    font-weight: 500;
 
     @include tablet {
         font-size: 1rem;
         line-height: 1.25rem;
-        font-weight: $demi;
+        font-weight: 500;
     }
 }
 
@@ -234,14 +234,20 @@
 
 .button {
     @include dark-background;
-    // width: 90%;
-    margin: 1.5rem 1rem;
+    margin: 1rem .3rem;
     padding: 1rem;
     border-radius: .25rem;
     text-wrap: nowrap;
+    @include tablet{
+        width: 40%;
+        align-content: right;
+        padding: .75rem 1rem;
+        margin-left: auto;
+    }
 }
 
 .footer {
+    color: $white;
     @include padding-mobile;
 
     @include tablet {

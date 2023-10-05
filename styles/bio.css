@@ -97,13 +97,13 @@
 .labels-buttons {
   font-size: 1.25rem;
   line-height: 1.25rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 @media screen and (min-width: 768px) {
   .labels-buttons {
     font-size: 1rem;
     line-height: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 
@@ -271,13 +271,22 @@
 .button {
   background-color: #323232;
   color: #FFFFFF;
-  margin: 1.5rem 1rem;
+  margin: 1rem 0.3rem;
   padding: 1rem;
   border-radius: 0.25rem;
   text-wrap: nowrap;
 }
+@media screen and (min-width: 768px) {
+  .button {
+    width: 40%;
+    align-content: right;
+    padding: 0.75rem 1rem;
+    margin-left: auto;
+  }
+}
 
 .footer {
+  color: #FFFFFF;
   padding: 1.5rem 1rem 1rem;
   background-color: #323232;
   color: #FFFFFF;
@@ -413,11 +422,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-.body {
-  font-family: "Avenir Next", sans-serif;
-  color: #323232;
 }
 
 .header__hero-img {
@@ -585,9 +589,16 @@
   width: 100%;
   box-sizing: border-box;
   padding: 1.5rem 1rem 1rem;
+  background: #FFFFFF;
 }
 .join__title {
-  padding: 2rem;
+  padding: 1rem 0;
+  text-wrap: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .join__title {
+    margin-left: 2rem;
+  }
 }
 .join__content {
   padding: 0 1rem;
@@ -624,12 +635,12 @@
   border-radius: 50%;
   background-color: #E1E1E1;
   width: 18vw;
-  max-height: 18vw;
+  height: 18vw;
   max-width: 2.25rem;
   max-height: 2.25rem;
 }
 .join__content-top__form {
-  width: 85vw;
+  width: 80vw;
   display: flex;
   flex-direction: column;
 }
@@ -656,7 +667,7 @@
   border-radius: 50%;
   background-color: #E1E1E1;
   width: 18vw;
-  max-height: 18vw;
+  height: 18vw;
   max-width: 2.25rem;
   max-height: 2.25rem;
 }

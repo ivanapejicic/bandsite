@@ -10,10 +10,6 @@
     box-sizing: border-box;
 }
 
-.body {
-    font-family: 'Avenir Next', sans-serif;
-    color: $bandsite-black;
-}
 
 .header__hero-img {
     @include background('../assets/images/hero-bio.jpg');
@@ -171,9 +167,14 @@
     width: 100%;
     box-sizing: border-box;
     @include padding-mobile;
+    background: $white;
 
     &__title {
-        padding: 2rem;
+        padding: 1rem 0;
+        text-wrap: nowrap;
+        @include tablet{
+            margin-left: 2rem;
+        }
     }
 
     &__content {
@@ -184,7 +185,6 @@
             width: 80%;
             margin: auto;
         }
-
         @include desktop {
             width: 40%;
         }
@@ -205,7 +205,7 @@
                 @include avatar;
             }
             &__form{
-                width: 85vw;
+                width: 80vw;
                 display: flex;
                 flex-direction: column;
             
