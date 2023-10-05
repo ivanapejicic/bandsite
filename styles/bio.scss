@@ -163,18 +163,22 @@
 }
 
 .join {
+    box-sizing: border-box;
     @include padding-mobile;
 
     &__title {
-        padding-bottom: 1rem;
+        padding: 2rem;
     }
 
     &__content {
-        padding: .1rem; //delete this at some point
+        padding: 0 1rem;
         @include flex(column);
         @include tablet{
             width: 80%;
-            align-content: center;
+            margin: auto;
+        }
+        @include desktop{
+            width: 40%;
         }
 
         &-form {
@@ -193,8 +197,8 @@
                 &__avatar {
                     border-radius: 50%;
                     background-color: $mercury;
-                    width: 3.25rem;                     //fix 
-                    max-height: 3.25rem;
+                    width: 2.8rem;                     //fix 
+                    max-height: 2.8rem;
                     @include tablet{
                         width: 4.25rem;
                         height: 4.25rem;;
@@ -210,6 +214,7 @@
                         align-items: baseline;
                         justify-content: space-between;
                         padding-bottom: .5rem;
+                
                         &__date{
                             color: $silver;        // why so light
                         }
@@ -222,59 +227,3 @@
         }
     }
 }
-
-// .comments{
-//     @include padding-mobile;
-//     background-color: $white;
-//     @include flex(column);
-
-//     &__title{
-//         @include padding-between-mobile;
-//         padding-top: 0;
-//     }
-
-//     &__content{
-//         // @include flex(row);
-//         @include padding-between-mobile;
-//         &-form{
-
-//         }
-//         &-comment{
-//             @include flex(row);
-//             align-items: baseline;
-//             justify-content: space-between;
-
-//             &__avatar{
-//                 border-radius: 50%;
-//                 background-color: $mercury;
-//                 width: 2.25rem;
-//                 height: 2.25rem;
-//             }
-
-//             &__obj{
-//                 width: 90%;
-//                 @include flex(column);
-//                 justify-content: space-between;
-//                 align-items: flex-end;
-//                 border-bottom: 1px solid $mercury;
-
-//                 &-top{
-//                     display: flex;
-//                     flex-direction: row;
-//                     align-items: baseline;
-//                     justify-content: space-between;
-
-//                     &__name{
-//                         font-weight: 500;
-//                     }
-//                     &__date{
-//                         color: $silver;
-//                     }
-//                 }
-//                 &-bottom{
-//                     text-align: left;
-//                 }
-//             }
-//         }
-//     }
-// }
