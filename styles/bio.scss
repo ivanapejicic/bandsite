@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 
-.header__hero-img{
+.header__hero-img {
     @include background('../assets/images/hero-bio.jpg');
 }
 
@@ -22,11 +22,13 @@
         @include padding-tablet-desktop;
         padding-bottom: 0;
     }
-    &__title{
-        @include desktop{
-            padding-left :4rem;
+
+    &__title {
+        @include desktop {
+            padding-left: 4rem;
         }
     }
+
     &__content {
         @include padding-between-mobile;
 
@@ -107,6 +109,7 @@
 
     &__parts {
         color: $bandsite-black;
+
         @include tablet {
             width: 47%;
         }
@@ -159,7 +162,66 @@
     }
 }
 
+.join {
+    @include padding-mobile;
 
+    &__title {
+        padding-bottom: 1rem;
+    }
+
+    &__content {
+        padding: .1rem; //delete this at some point
+        @include flex(column);
+        @include tablet{
+            width: 80%;
+            align-content: center;
+        }
+
+        &-form {
+            padding: .1rem; //delete this at some point
+        }
+
+        &-comments {
+            border-top: 1px solid $mercury;
+
+            .comment {
+                display: flex;
+                justify-content: space-between;
+                padding: 0.5rem 0;
+                border-bottom: 1px solid $mercury;
+
+                &__avatar {
+                    border-radius: 50%;
+                    background-color: $mercury;
+                    width: 3.25rem;                     //fix 
+                    max-height: 3.25rem;
+                    @include tablet{
+                        width: 4.25rem;
+                        height: 4.25rem;;
+                    }
+
+                }
+
+                &__obj {
+                    width: 80%;
+
+                    &-top{
+                        display: flex;
+                        align-items: baseline;
+                        justify-content: space-between;
+                        padding-bottom: .5rem;
+                        &__date{
+                            color: $silver;        // why so light
+                        }
+                    }
+                    &-bottom{
+                        padding-bottom: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
 
 // .comments{
 //     @include padding-mobile;
@@ -195,7 +257,7 @@
 //                 justify-content: space-between;
 //                 align-items: flex-end;
 //                 border-bottom: 1px solid $mercury;
-                
+
 //                 &-top{
 //                     display: flex;
 //                     flex-direction: row;

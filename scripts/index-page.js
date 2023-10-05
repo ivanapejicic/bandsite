@@ -30,11 +30,11 @@ function displayComment(comment) {
 
     const objTop = document.createElement("div");
     objTop.className = "comment__obj-top";
-    const name = document.createElement("div");
-    name.className = "commen__obj-top__name";
+    const name = document.createElement("h3");
+    name.className = "commen__obj-top__name subheader";
     name.textContent = comment.name;
     objTop.appendChild(name);
-    const date = document.createElement("div");
+    const date = document.createElement("p");
     date.className = "comment__obj-top__date";
     date.textContent = comment.date;
     objTop.appendChild(date);
