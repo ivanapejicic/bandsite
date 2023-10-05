@@ -30,7 +30,7 @@
     font-weight: 600;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .page-header {
     font-size: 4.25rem;
   }
@@ -109,7 +109,7 @@
   padding: 1rem;
   padding-bottom: 0.5rem;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .header__logo {
     margin-left: 4.25rem;
     margin-right: 2.25rem;
@@ -137,7 +137,7 @@
     font-size: 1.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .header__nav {
     gap: 0;
   }
@@ -218,10 +218,19 @@
     padding-left: 4rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .header__hero-title {
     padding-left: 6rem;
   }
+}
+
+.button {
+  background-color: #323232;
+  color: #FFFFFF;
+  margin: 1.5rem 1rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  text-wrap: nowrap;
 }
 
 .footer {
@@ -243,7 +252,7 @@
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .footer__top {
     padding: 0 5rem;
   }
@@ -290,7 +299,7 @@
     padding: 0.5rem 2rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .footer__left-social {
     padding: 1rem 3rem;
   }
@@ -331,7 +340,7 @@
     width: 31%;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .footer__content {
     width: 82%;
     padding-left: 5rem;
@@ -349,7 +358,7 @@
     display: none;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .footer__bottom-copyright {
     padding-left: 5rem;
   }
@@ -381,7 +390,7 @@
     padding-bottom: 0;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .moto__title {
     padding-left: 4rem;
   }
@@ -407,13 +416,13 @@
     padding: 1.125rem 0;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .moto__content-img {
     height: 35em;
     padding: 1.125rem 0;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .moto__content-text {
     width: 80%;
   }
@@ -492,7 +501,7 @@
     padding-left: 0.5rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .photos__header {
     padding-left: 4rem;
   }
@@ -516,7 +525,7 @@
     padding: 0.5rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   .photos__img {
     width: 30%;
     padding: 1rem;

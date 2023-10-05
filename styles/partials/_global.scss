@@ -154,19 +154,20 @@
             }
         }
     }
+
     &__hero {
         @include flex(column);
         align-items: flex-start;
         position: relative;
         // z-index: 1;
-    
+
         &-img {
             height: 50vw;
             width: 100%;
             position: absolute;
             z-index: 2;
         }
-    
+
         &-content {
             background-color: $bandsite-black;
             height: 50vw;
@@ -175,24 +176,33 @@
             z-index: 1;
 
         }
-    
+
         &-title {
             color: $white;
             margin: 0;
             position: absolute;
             z-index: 3;
             padding-left: 1rem;
-    
+
             @include tablet {
                 padding-left: 4rem;
             }
-    
+
             @include desktop {
                 padding-left: 6rem;
             }
         }
     }
 
+}
+
+.button {
+    @include dark-background;
+    // width: 90%;
+    margin: 1.5rem 1rem;
+    padding: 1rem;
+    border-radius: .25rem;
+    text-wrap: nowrap;
 }
 
 .footer {
@@ -235,7 +245,7 @@
         @include tablet {
             @include flex(row);
             align-items: baseline;
-            justify-content:baseline;
+            justify-content: baseline;
             flex-wrap: nowrap;
         }
 
@@ -323,4 +333,3 @@
         }
     }
 }
-

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BandSite</title>
     <link rel="stylesheet" href="./styles/bio.css">
-    <link rel="stylesheet" href="./styles/partials/_global.css">
+    <link rel="stylesheet" href="./styles/partials/_global.scss">
     <script defer src="./scripts/index-page.js"></script>
 </head>
 
@@ -96,6 +96,27 @@
                 <img class="photos__img" src="./assets/images/Photo-gallery-7.jpg" alt="image 7">
                 <img class="photos__img" src="./assets/images/Photo-gallery-8.jpg" alt="image 8">
                 <img class="photos__img" src="./assets/images/Photo-gallery-9.jpg" alt="image 9">
+            </div>
+        </section>
+
+        <section class="join">
+            <h2 class="join__title section-header">Join the Conversation</h2>
+            <div class="join__content">
+                <form class="join__content-form" novalidate>
+                    <div>
+                        <label for="nameInput">NAME</label>
+                        <input type="text" id="nameInput" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <label for="textInput">COMMENT</label>
+                        <textarea id="textInput" placeholder="Add a new comment"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="button">COMMENT</button>
+
+                    </div>
+                </form>
+                <div class="join__content-comments"></div>
             </div>
         </section>
     </main>
