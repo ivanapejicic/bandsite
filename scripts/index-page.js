@@ -58,8 +58,10 @@ for (let i=comments.length-1; i>-1; i--){
     displayComment(comments[i]);
 }
 
-//hide form after submitting
-
+// function that add '0' in front of months < 10
+function monthDisplay(date){
+    let month = date.splice()
+}
 
 // handling form input
 function submitHandler(event){
@@ -67,7 +69,8 @@ function submitHandler(event){
     const nameElement = form.nameInput.value;
     const commentElement = form.textInput.value;
     const date = new Date(Date.now());
-    let formatDate = date.toLocaleDateString();
+    const options = {year: 'numeric', month: '2-digit', day: '2-digit'};
+    const formatDate = date.toLocaleDateString(undefined, options);
     console.log(nameElement, commentElement);
 
     let commentObject = {

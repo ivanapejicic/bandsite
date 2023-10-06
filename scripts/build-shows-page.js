@@ -33,7 +33,9 @@ let concerts = [
 ];
 
 const concertsContainer = document.querySelector(".concerts__content");
+const showsHeader = document.querySelector(".concerts__header");
 
+// function that will help create a container for each show and reduce repeating 
 function createMyElement(elClass, content){
     const element = document.createElement("div");
     element.className = 'concerts__content-container__' + elClass;
@@ -56,12 +58,33 @@ for (let i=0; i<concerts.length; i++){
     button.className = 'concerts__content-container__button labels-buttons';
     button.textContent = "BUY TICKETS";
 
-    // const titleRow = document.create("div");
-    // titleRow.className = 'subtitles';
-    // titleRow.textContent = ""
-
     concertDiv.appendChild(button);
 
     concertsContainer.appendChild(concertDiv);
+};
+
+// function that will add header for Shows for tablet/desktop view
+function addShowsHeader(){
+    const titleContainer = document.createElement("div");
+    titleContainer.className = ("concerts__header-shows");
+
+    const date = document.createElement("div");
+    date.className = "concerts__header-shows__subtitle subtitle-tablet";
+    date.textContent = "DATE";
+    titleContainer.appendChild(date);
+
+    const venue = document.createElement("div");
+    venue.className = "concerts__header-shows__subtitle subtitle-tablet";
+    venue.textContent = "VENUE";
+    titleContainer.appendChild(venue);
+
+    const location = document.createElement("div");
+    location.className = "concerts__header-shows__subtitle subtitle-tablet";
+    location.textContent = "LOCATION";
+    titleContainer.appendChild(location);
+    
+    showsHeader.appendChild(titleContainer);
 
 };
+
+addShowsHeader();
