@@ -284,6 +284,9 @@
     margin-left: auto;
   }
 }
+.button:hover {
+  background-color: #000000;
+}
 
 .footer {
   color: #FFFFFF;

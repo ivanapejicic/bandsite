@@ -284,6 +284,9 @@
     margin-left: auto;
   }
 }
+.button:hover {
+  background-color: #000000;
+}
 
 .footer {
   color: #FFFFFF;
@@ -535,8 +538,10 @@
 .concerts__content-container__date {
   font-weight: 600;
 }
-.concerts__content-container__date, .concerts__content-container__venue, .concerts__content-container__location {
-  width: 20%;
+@media screen and (min-width: 768px) {
+  .concerts__content-container__date, .concerts__content-container__venue, .concerts__content-container__location {
+    width: 20%;
+  }
 }
 .concerts__content-container__button {
   background-color: #323232;
@@ -552,6 +557,9 @@
     width: 20%;
     padding: 0.75rem 1rem;
   }
+}
+.concerts__content-container__button:hover {
+  background-color: #000000;
 }
 .concerts__content-container:hover {
   background-color: #FAFAFA;

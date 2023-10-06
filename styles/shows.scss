@@ -27,12 +27,13 @@
     }
 
     &__header {
-        @include desktop{
+        @include desktop {
             display: flex;
             align-items: baseline;
             justify-content: space-between;
             width: 75%;
         }
+
         &-title {
             font-size: 2rem;
             font-weight: 500;
@@ -41,27 +42,31 @@
             @include tablet {
                 font-size: 3rem;
             }
-            @include desktop{
+
+            @include desktop {
                 padding-left: 2rem;
             }
-            
+
         }
-        &-shows{
+
+        &-shows {
             color: $silver;
             font-weight: 500;
             padding: 2rem 0 0;
             display: none;
 
-            @include tablet{
+            @include tablet {
                 @include flex(row);
                 align-items: center;
                 justify-content: space-between;
                 width: 63%;
             }
-            @include desktop{
+
+            @include desktop {
                 width: 67%;
             }
-            &__subtitle{
+
+            &__subtitle {
                 width: 20%;
             }
         }
@@ -99,8 +104,14 @@
             &__date {
                 font-weight: 600;
             }
-            &__date, &__venue, &__location{
-                width: 20%;
+
+            @include tablet {
+
+                &__date,
+                &__venue,
+                &__location {
+                    width: 20%;
+                }
             }
 
             &__button {
@@ -111,10 +122,12 @@
                 border-radius: .25rem;
                 text-wrap: nowrap;
 
-
                 @include tablet {
                     width: 20%;
                     padding: .75rem 1rem;
+                }
+                &:hover{
+                    background-color: $bandsite-darkblack;
                 }
             }
 
