@@ -137,7 +137,7 @@
         @include tablet {
             @include flex(row);
             justify-content: flex-start;
-            height: 8vh;
+            height: 10vh;
             gap: 1rem;
             padding: 0 2.5rem;
             font-size: 1.25rem;
