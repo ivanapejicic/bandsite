@@ -45,12 +45,13 @@
             height: 60vw;
 
             @include tablet {
-                height: 25em;
+                height: 40em;
                 @include padding-between-tablet-desktop;
             }
 
             @include desktop {
-                height: 35em;
+                height: 30em;
+                width: 100%;
                 @include padding-between-tablet-desktop;
             }
         }
