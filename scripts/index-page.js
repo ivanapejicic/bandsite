@@ -53,39 +53,36 @@ function displayComment(comment) {
     commentsCont.appendChild(commentContainer);
 
 }
+
 // displaying default comments
-for (let i=comments.length-1; i>-1; i--){
+for (let i = comments.length - 1; i > -1; i--) {
     displayComment(comments[i]);
 }
 
-// function that add '0' in front of months < 10
-function monthDisplay(date){
-    let month = date.splice()
-}
-
 // handling form input
-function submitHandler(event){
+function submitHandler(event) {
     event.preventDefault();
     const nameElement = form.nameInput.value;
     const commentElement = form.textInput.value;
     const date = new Date(Date.now());
-    const options = {year: 'numeric', month: '2-digit', day: '2-digit'};
+    const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     const formatDate = date.toLocaleDateString(undefined, options);
-    console.log(nameElement, commentElement);
 
     let commentObject = {
-            name: nameElement,
-            date: formatDate,
-            text: commentElement
+        name: nameElement,
+        date: formatDate,
+        text: commentElement
     };
+
     comments.push(commentObject);
     commentsCont.innerText = '';
 
-    for (let i=comments.length-1; i>-1; i--){
+    for (let i = comments.length - 1; i > -1; i--) {
         displayComment(comments[i]);
     }
-    form.nameInput.value= '';
-    form.textInput.value= '';
+    form.nameInput.value = '';
+    form.textInput.value = '';
 }
+
 form.addEventListener("submit", submitHandler);
 

@@ -2,7 +2,6 @@
 /* secondary colors */
 /* breakpoints */
 /* Variables for font weights */
-/* error state for fields */
 @font-face {
   font-family: "Avenir Next";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("ttf");
@@ -20,7 +19,7 @@
   font-weight: 700;
 }
 .page-header {
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   line-height: 2rem;
   font-weight: 600;
 }
@@ -230,42 +229,54 @@
   font-weight: 600;
 }
 .header__hero {
+  position: relative;
+}
+.header__hero-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-items: flex-start;
-  position: relative;
-}
-.header__hero-img {
-  height: 50vw;
+  height: 50vh;
   width: 100%;
   position: absolute;
-  z-index: 2;
-}
-.header__hero-content {
-  background-color: #323232;
-  height: 50vw;
-  width: 100%;
-  position: relative;
   z-index: 1;
 }
-.header__hero-title {
-  color: #FFFFFF;
-  margin: 0;
-  position: absolute;
-  z-index: 3;
-  padding-left: 1rem;
-}
 @media screen and (min-width: 768px) {
-  .header__hero-title {
-    padding-left: 4rem;
+  .header__hero-img {
+    padding: 0 2rem;
+    height: 70vh;
   }
 }
 @media screen and (min-width: 1280px) {
-  .header__hero-title {
-    padding-left: 6rem;
+  .header__hero-img {
+    height: 90vh;
   }
+}
+.header__hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .header__hero-content {
+    padding: 0 2rem;
+    height: 70vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__hero-content {
+    height: 90vh;
+  }
+}
+.header__hero-content__titles-two {
+  color: #FFFFFF;
+  padding-top: 0;
+  padding-bottom: 2rem;
 }
 
 .button {
@@ -430,7 +441,7 @@
 .header__hero-img {
   background-image: url("../assets/images/hero-bio.jpg");
   background-color: #323232;
-  opacity: 50%;
+  opacity: 0.7;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
