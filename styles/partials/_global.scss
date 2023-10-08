@@ -246,15 +246,18 @@
 .button {
     @include dark-background;
     margin: 1rem .3rem;
-    padding: 1rem;
+    padding: .5rem;
     border-radius: .25rem;
     text-wrap: nowrap;
+    height: 2.5rem;
 
     @include tablet {
         width: 40%;
         align-content: right;
-        padding: .75rem 1rem;
+        padding: .5rem 1rem;
         margin-left: auto;
+        min-width: 9.375rem;
+
     }
 
     &:hover {

@@ -88,6 +88,7 @@ function addShowsHeader() {
 };
 
 const shows = document.querySelectorAll('.concerts__content-container');
+
 //function that will make a row "selected" until another row is clicked
 shows.forEach((show) => {
     show.addEventListener('click', () => {

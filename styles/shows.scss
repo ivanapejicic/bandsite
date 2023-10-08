@@ -70,10 +70,13 @@
 }
 
 .concerts {
+    background-color: $white;;
     color: $bandsite-black;
     padding: 1rem;
+    @include padding-mobile;
 
     @include tablet {
+        @include padding-tablet-desktop;
         padding: 1.5rem;
     }
 
@@ -92,7 +95,7 @@
         &-title {
             font-size: 2rem;
             font-weight: 500;
-            padding: 3rem 0 1rem;
+            padding: 2rem 0 1rem;
 
             @include tablet {
                 font-size: 3rem;
@@ -173,13 +176,16 @@
                 @include dark-background;
                 width: 90%;
                 margin: 1.5rem 1rem;
-                padding: 1rem;
+                padding: .7rem;
                 border-radius: .25rem;
                 text-wrap: nowrap;
+                height: 2.5rem;
+
 
                 @include tablet {
                     width: 20%;
-                    padding: .75rem 1rem;
+                    padding: .5rem 1rem;
+                    min-width: 9.375rem;
                 }
 
                 &:hover {

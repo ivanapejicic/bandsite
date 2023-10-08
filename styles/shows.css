@@ -4,18 +4,18 @@
 /* Variables for font weights */
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("ttf");
-  src: url("../../assets/fonts/AlternativeFiles/AvenirNextLTPro.ttf") format("otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
+  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("ttf"), url("../../assets/fonts/AlternativeFiles/AvenirNextLTProDemi.ttf") format("otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("otf"), url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("ttf");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("ttf"), url("../../assets/fonts/AlternativeFiles/AvenirNextLTProBold.ttf") format("otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("otf"), url("../../assets/fonts/AvenirNextLTProBold.ttf") format("ttf");
   font-weight: 700;
 }
 .page-header {
@@ -284,16 +284,18 @@
   background-color: #323232;
   color: #FFFFFF;
   margin: 1rem 0.3rem;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 0.25rem;
   text-wrap: nowrap;
+  height: 2.5rem;
 }
 @media screen and (min-width: 768px) {
   .button {
     width: 40%;
     align-content: right;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     margin-left: auto;
+    min-width: 9.375rem;
   }
 }
 .button:hover {
@@ -503,11 +505,14 @@
 }
 
 .concerts {
+  background-color: #FFFFFF;
   color: #323232;
   padding: 1rem;
+  padding: 1.5rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .concerts {
+    padding: 3rem 2.25rem 2.25rem;
     padding: 1.5rem;
   }
 }
@@ -527,7 +532,7 @@
 .concerts__header-title {
   font-size: 2rem;
   font-weight: 500;
-  padding: 3rem 0 1rem;
+  padding: 2rem 0 1rem;
 }
 @media screen and (min-width: 768px) {
   .concerts__header-title {
@@ -614,14 +619,16 @@
   color: #FFFFFF;
   width: 90%;
   margin: 1.5rem 1rem;
-  padding: 1rem;
+  padding: 0.7rem;
   border-radius: 0.25rem;
   text-wrap: nowrap;
+  height: 2.5rem;
 }
 @media screen and (min-width: 768px) {
   .concerts__content-container__button {
     width: 20%;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
+    min-width: 9.375rem;
   }
 }
 .concerts__content-container__button:hover {
