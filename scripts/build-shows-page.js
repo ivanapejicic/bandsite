@@ -36,16 +36,16 @@ const concertsContainer = document.querySelector(".concerts__content");
 const showsHeader = document.querySelector(".concerts__header");
 
 // function that will help create a container for each show and reduce repeating 
-function createMyElement(elClass, content){
+function createMyElement(elClass, content) {
     const element = document.createElement("div");
-    element.className = 'concerts__content-container__' + elClass;
+    element.classList.add('concerts__content-container__' + elClass);
     element.textContent = content;
     return element;
 }
 
-for (let i=0; i<concerts.length; i++){
+for (let i = 0; i < concerts.length; i++) {
     const concertDiv = document.createElement("div");
-    concertDiv.className = "concerts__content-container";
+    concertDiv.classList.add("concerts__content-container");
 
     concertDiv.appendChild(createMyElement("subtitle", "DATE"));
     concertDiv.appendChild(createMyElement("date", concerts[i].date));
@@ -55,7 +55,7 @@ for (let i=0; i<concerts.length; i++){
     concertDiv.appendChild(createMyElement("location", concerts[i].location));
 
     const button = document.createElement("button");
-    button.className = 'concerts__content-container__button labels-buttons';
+    button.classList.add("concerts__content-container__button", "labels-buttons");
     button.textContent = "BUY TICKETS";
 
     concertDiv.appendChild(button);
@@ -64,27 +64,40 @@ for (let i=0; i<concerts.length; i++){
 };
 
 // function that will add header for Shows for tablet/desktop view
-function addShowsHeader(){
+function addShowsHeader() {
     const titleContainer = document.createElement("div");
     titleContainer.className = ("concerts__header-shows");
 
     const date = document.createElement("div");
-    date.className = "concerts__header-shows__subtitle subtitle-tablet";
+    date.classList.add("concerts__header-shows__subtitle", "subtitle-tablet");
     date.textContent = "DATE";
     titleContainer.appendChild(date);
 
     const venue = document.createElement("div");
-    venue.className = "concerts__header-shows__subtitle subtitle-tablet";
+    venue.classList.add("concerts__header-shows__subtitle", "subtitle-tablet");
     venue.textContent = "VENUE";
     titleContainer.appendChild(venue);
 
     const location = document.createElement("div");
-    location.className = "concerts__header-shows__subtitle subtitle-tablet";
+    location.classList.add("concerts__header-shows__subtitle", "subtitle-tablet");
     location.textContent = "LOCATION";
     titleContainer.appendChild(location);
-    
+
     showsHeader.appendChild(titleContainer);
 
 };
+
+const shows = document.querySelectorAll('.concerts__content-container');
+//function that will make a row "selected" until another row is clicked
+shows.forEach((show) => {
+    show.addEventListener('click', () => {
+        show.classList.add('active');
+        shows.forEach((differentShow) => {
+            if (differentShow !== show) {
+                differentShow.classList.remove('active');
+            }
+        });
+    });
+});
 
 addShowsHeader();

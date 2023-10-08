@@ -24,24 +24,24 @@ function displayComment(comment) {
     commentContainer.className = "comment";
 
     const avatar = document.createElement("div");
-    avatar.className = 'comment__avatar';
+    avatar.classList.add('comment__avatar');
 
     const obj = document.createElement("div");
     obj.className = 'comment__obj';
 
     const objTop = document.createElement("div");
-    objTop.className = "comment__obj-top";
+    objTop.classList.add("comment__obj-top");
     const name = document.createElement("h3");
-    name.className = "comment__obj-top__name subheader-comments";
+    name.classList.add("comment__obj-top__name", "subheader-comments");
     name.textContent = comment.name;
     objTop.appendChild(name);
     const date = document.createElement("p");
-    date.className = "comment__obj-top__date";
+    date.classList.add("comment__obj-top__date");
     date.textContent = comment.date;
     objTop.appendChild(date);
 
     const objBottom = document.createElement("p");
-    objBottom.className = "comment__obj-bottom body-copy";
+    objBottom.classList.add("comment__obj-bottom", "body-copy");
     objBottom.textContent = comment.text;
 
     obj.appendChild(objTop);

@@ -572,7 +572,7 @@
   align-items: flex-start;
 }
 .concerts__content-container {
-  border-bottom: 2px #E1E1E1 solid;
+  border-bottom: 1px #E1E1E1 solid;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -629,4 +629,7 @@
 }
 .concerts__content-container:hover {
   background-color: #FAFAFA;
+}
+.concerts__content .active {
+  background-color: #E1E1E1;
 }/*# sourceMappingURL=shows.css.map */
