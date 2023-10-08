@@ -68,6 +68,14 @@ function submitHandler(event) {
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     const formatDate = date.toLocaleDateString(undefined, options);
 
+    if (nameElement === ''){
+        alert("Please provide your name :-)");
+        return;
+    }
+    if (commentElement === ''){
+        alert("Don't you want to leave us a comment? :)");
+        return;
+    }
     let commentObject = {
         name: nameElement,
         date: formatDate,
