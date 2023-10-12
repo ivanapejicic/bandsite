@@ -2,6 +2,15 @@
 @use "../partials/typography" as *;
 @use "../partials/variables" as *;
 
+* {
+    font-family: 'Avenir Next', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $white;
+}
 .page-header {
     font-size: 2.25rem;
     line-height: 2rem;
