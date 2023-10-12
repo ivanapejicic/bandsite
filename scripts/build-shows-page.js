@@ -1,40 +1,13 @@
-let concerts = [
-    {
-        date: "Mon Sept 06 2021",
-        venue: "Ronald Lane ",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Tue Sept 21 2021",
-        venue: "Pier 3 East",
-        location: "San Francisco, CA "
-    },
-    {
-        date: "Fri Oct 15 2021 ",
-        venue: "View Lounge",
-        location: "San Francisco, CA "
-    },
-    {
-        date: "Sat Nov 06 2021 ",
-        venue: "Hyatt Agency",
-        location: "San Francisco, CA "
-    },
-    {
-        date: "Fri Nov 26 2021",
-        venue: "Moscow Center ",
-        location: "San Francisco, CA "
-    },
-    {
-        date: "Wed Dec 15 2021",
-        venue: "Press Club",
-        location: "San Francisco, CA "
-    }
-
-];
-
 const concertsContainer = document.querySelector(".concerts__content");
 const showsHeader = document.querySelector(".concerts__header");
+const api_key = "11631f94-ded6-432e-9403-f17d7e61c05a";
+const backendShows = new BandSiteApi(api_key);
 
+// function that converts timestamp to a date for shows
+function convertTimestampShows(ts){
+    const date = (new Date(ts)).toDateString();
+    return date;
+}
 // function that will help create a container for each show and reduce repeating 
 function createMyElement(elClass, content) {
     const element = document.createElement("div");
@@ -43,16 +16,16 @@ function createMyElement(elClass, content) {
     return element;
 }
 
-for (let i = 0; i < concerts.length; i++) {
+function displayShow(showObject){
     const concertDiv = document.createElement("div");
     concertDiv.classList.add("concerts__content-container");
 
     concertDiv.appendChild(createMyElement("subtitle", "DATE"));
-    concertDiv.appendChild(createMyElement("date", concerts[i].date));
+    concertDiv.appendChild(createMyElement("date", convertTimestampShows(showObject.date)));
     concertDiv.appendChild(createMyElement("subtitle", "VENUE"));
-    concertDiv.appendChild(createMyElement("venue", concerts[i].venue));
+    concertDiv.appendChild(createMyElement("venue", showObject.place));
     concertDiv.appendChild(createMyElement("subtitle", "LOCATION"));
-    concertDiv.appendChild(createMyElement("location", concerts[i].location));
+    concertDiv.appendChild(createMyElement("location", showObject.location));
 
     const button = document.createElement("button");
     button.classList.add("concerts__content-container__button", "labels-buttons");
@@ -62,6 +35,20 @@ for (let i = 0; i < concerts.length; i++) {
 
     concertsContainer.appendChild(concertDiv);
 };
+
+async function displayShows() {
+    try {
+        const shows = await backendShows.getShows();
+        console.log(shows);
+        for (const show of shows) {
+            displayShow(show);
+        }
+        
+    } catch {
+        alert('cannot get data from API');
+    }
+}
+displayShows();
 
 // function that will add header for Shows for tablet/desktop view
 function addShowsHeader() {

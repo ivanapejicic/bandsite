@@ -7,9 +7,7 @@ class BandSiteApi {
     }
     async getComments() {
         const url = `${this.baseURL}comments?api_key=${this.apiKey}`;
-        
         const response = await axios.get(url);
-        
         const comments = response.data;
         comments.sort(function(a,b){return b.timestamp - a.timestamp});
         return comments;
@@ -17,12 +15,8 @@ class BandSiteApi {
 
     async getShows() {
         const url = `${this.baseURL}showdates?api_key=${this.apiKey}`;
-        console.log(url);
         const response = await axios.get(url);
-        console.log(response);
         const showArray = response.data;
-        console.log(showArray);
-        return showArray;
-        
+        return showArray;     
     }
 }
