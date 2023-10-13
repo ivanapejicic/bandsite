@@ -5,6 +5,12 @@ class BandSiteApi {
         this.baseURL = ('https://project-1-api.herokuapp.com/');
         this.apiKey = apiKey;
     }
+
+    async postComment(comment){
+        const json = JSON.stringify(comment);
+        const response = await axios.post(`${this.baseURL}comments?api_key=${this.apiKey}`,json);
+        return response.data;
+    }
     async getComments() {
         const url = `${this.baseURL}comments?api_key=${this.apiKey}`;
         const response = await axios.get(url);
@@ -20,3 +26,4 @@ class BandSiteApi {
         return showArray;     
     }
 }
+

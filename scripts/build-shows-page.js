@@ -4,7 +4,7 @@ const api_key = "11631f94-ded6-432e-9403-f17d7e61c05a";
 const backendShows = new BandSiteApi(api_key);
 
 // function that converts timestamp to a date for shows
-function convertTimestampShows(ts){
+function convertTimestampShows(ts) {
     const date = (new Date(ts)).toDateString();
     return date;
 }
@@ -16,7 +16,8 @@ function createMyElement(elClass, content) {
     return element;
 }
 
-function displayShow(showObject){
+// function that displays single show (row)
+function displayShow(showObject) {
     const concertDiv = document.createElement("div");
     concertDiv.classList.add("concerts__content-container");
 
@@ -34,16 +35,17 @@ function displayShow(showObject){
     concertDiv.appendChild(button);
 
     concertsContainer.appendChild(concertDiv);
+    
 };
 
 async function displayShows() {
     try {
         const shows = await backendShows.getShows();
-        console.log(shows);
+        
         for (const show of shows) {
             displayShow(show);
         }
-        
+
     } catch {
         alert('cannot get data from API');
     }
@@ -74,18 +76,29 @@ function addShowsHeader() {
 
 };
 
-const shows = document.querySelectorAll('.concerts__content-container');
 
 //function that will make a row "selected" until another row is clicked
-shows.forEach((show) => {
-    show.addEventListener('click', () => {
-        show.classList.add('active');
-        shows.forEach((differentShow) => {
-            if (differentShow !== show) {
-                differentShow.classList.remove('active');
-            }
-        });
-    });
-});
+// async function activeShow() {
+//     try {
+//         const shows = await backendShows.getShows();
+//         shows.forEach((show) => {
+//             show.addEventListener('click', () => {
+//                 show.classList.add('active');
+//                 shows.forEach((differentShow) => {
+//                     if (differentShow !== show) {
+//                         differentShow.classList.remove('active');
+//                     }
+//                 });
+//             });
+//         });
+//     }
+
+//     catch {
+//         alert('cannot get data from API');
+//     }
+// }
+
+// activeShow();
+
 
 addShowsHeader();

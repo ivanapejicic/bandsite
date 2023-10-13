@@ -4,7 +4,7 @@ const api_key = "11631f94-ded6-432e-9403-f17d7e61c05a";
 const backendComments = new BandSiteApi(api_key);
 
 // function that converts timestamp to a date of format MM/DD/YYYY
-function convertTimestamp(ts){
+function convertTimestamp(ts) {
     const formattedDate = (new Intl.DateTimeFormat('en-US', {
         year: 'numeric',
         month: '2-digit',
@@ -12,6 +12,7 @@ function convertTimestamp(ts){
     })).format(new Date(ts));
     return formattedDate;
 }
+
 function displayComment(comment) {
     const commentContainer = document.createElement("div");
     commentContainer.className = "comment";
@@ -29,7 +30,7 @@ function displayComment(comment) {
     name.classList.add("comment__obj-top__name", "subheader-comments");
     name.textContent = comment.name;
     objTop.appendChild(name);
-    
+
     const date = document.createElement("p");
     const timestamp = comment.timestamp;
     const formattedDate = convertTimestamp(timestamp);
@@ -53,8 +54,6 @@ function displayComment(comment) {
 async function displayComments() {
     try {
         const comments = await backendComments.getComments();
-        console.log(comments);
-        // commentsCont.innerText = '';
         for (const comment of comments) {
             displayComment(comment);
         }
@@ -64,6 +63,16 @@ async function displayComments() {
     }
 }
 displayComments();
+
+// function that add/posts object/comment
+async function addComment(comment) {
+    try {
+        const comments = await backendComments.postComment(comment);
+
+    } catch {
+        alert('cannot add your comment');
+    }
+}
 
 // handling form input
 function submitHandler(event) {
@@ -87,13 +96,14 @@ function submitHandler(event) {
         date: formatDate,
         text: commentElement
     };
-
-    comments.push(commentObject);
+    addComment(commentObject);
     commentsCont.innerText = '';
+    console.log(commentsCont);
 
-    for (let i = comments.length - 1; i > -1; i--) {
-        displayComment(comments[i]);
-    }
+    // for (let i = comments.length - 1; i > -1; i--) {
+    //     displayComment(comments[i]);
+    // }
+    displayComments();
     form.nameInput.value = '';
     form.textInput.value = '';
 }
