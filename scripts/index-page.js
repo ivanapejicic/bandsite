@@ -64,18 +64,9 @@ async function displayComments() {
 }
 displayComments();
 
-// function that add/posts object/comment
-async function addComment(comment) {
-    try {
-        const comments = await backendComments.postComment(comment);
-
-    } catch {
-        alert('cannot add your comment');
-    }
-}
 
 // handling form input
-function submitHandler(event) {
+async function submitHandler(event) {
     event.preventDefault();
     const nameElement = form.nameInput.value;
     const commentElement = form.textInput.value;
@@ -91,18 +82,14 @@ function submitHandler(event) {
         alert("Don't you want to leave us a comment? :)");
         return;
     }
-    let commentObject = {
+    let commentObject  = {
         name: nameElement,
-        date: formatDate,
-        text: commentElement
+        comment: commentElement
     };
-    addComment(commentObject);
-    commentsCont.innerText = '';
-    console.log(commentsCont);
+    await backendComments.postComment(commentObject);
 
-    // for (let i = comments.length - 1; i > -1; i--) {
-    //     displayComment(comments[i]);
-    // }
+    commentsCont.innerText = '';
+    
     displayComments();
     form.nameInput.value = '';
     form.textInput.value = '';
