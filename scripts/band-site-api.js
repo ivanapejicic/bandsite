@@ -7,27 +7,10 @@ class BandSiteApi {
     }
 
     async postComment(comment) {
-        // const json = JSON.stringify(comment);
         const response = await axios.post(`${this.baseURL}comments?api_key=${this.apiKey}`, comment);
         return response.data;
     }
-    /*  
-POST request
-
-axios.post('/user', {
-    firstName: 'Fred',
-    lastName: 'Flintstone'
-  })
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  }); */
-
-
-
-
+    
     async getComments() {
         const url = `${this.baseURL}comments?api_key=${this.apiKey}`;
         const response = await axios.get(url);
