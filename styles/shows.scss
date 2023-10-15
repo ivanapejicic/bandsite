@@ -3,12 +3,12 @@
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/global" as *;
 
-* {
-    font-family: 'Avenir Next', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+// * {
+//     font-family: 'Avenir Next', sans-serif;
+//     padding: 0;
+//     margin: 0;
+//     box-sizing: border-box;
+// }
 
 .header__hero {
 
@@ -70,9 +70,9 @@
 }
 
 .concerts {
-    background-color: $white;;
     color: $bandsite-black;
     padding: 1rem;
+    background-color: $white;
     @include padding-mobile;
 
     @include tablet {

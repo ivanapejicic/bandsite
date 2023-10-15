@@ -27,10 +27,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #FFFFFF;
-}
-
 .page-header {
   font-size: 2.25rem;
   line-height: 2rem;
@@ -447,13 +443,6 @@ body {
   }
 }
 
-* {
-  font-family: "Avenir Next", sans-serif;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 .header__hero-img {
   background-image: url("../assets/images/hero-shows.jpg");
   background-position: center;
@@ -518,9 +507,9 @@ body {
 }
 
 .concerts {
-  background-color: #FFFFFF;
   color: #323232;
   padding: 1rem;
+  background-color: #FFFFFF;
   padding: 1.5rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {

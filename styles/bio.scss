@@ -8,6 +8,7 @@
 }
 
 .moto {
+    background-color: $white;
     color: $bandsite-black;
     @include padding-mobile;
 
@@ -159,8 +160,8 @@
 .join {
     width: 100%;
     box-sizing: border-box;
+    background-color: $white;
     @include padding-mobile;
-    background: $white;
 
     &__title {
         padding: 1rem 0;

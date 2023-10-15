@@ -77,7 +77,7 @@ function addShowsHeader() {
 };
 
 
-//function that will make a row "selected" until another row is clicked
+// function that will make a row "selected" until another row is clicked
 // async function activeShow() {
 //     try {
 //         const shows = await backendShows.getShows();
