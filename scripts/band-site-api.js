@@ -1,4 +1,3 @@
-
 class BandSiteApi {
 
     constructor(apiKey) {
@@ -8,7 +7,7 @@ class BandSiteApi {
 
     async postComment(comment) {
         const response = await axios.post(`${this.baseURL}comments?api_key=${this.apiKey}`, comment);
-        return response.data;
+        return response.data;  
     }
     
     async getComments() {
