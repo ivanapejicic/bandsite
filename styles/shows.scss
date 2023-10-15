@@ -3,12 +3,6 @@
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/global" as *;
 
-// * {
-//     font-family: 'Avenir Next', sans-serif;
-//     padding: 0;
-//     margin: 0;
-//     box-sizing: border-box;
-// }
 
 .header__hero {
 
@@ -191,15 +185,14 @@
                 &:hover {
                     background-color: $bandsite-darkblack;
                 }
+                
             }
-            
             &:hover {
                 background-color: $alabaster;
             }
         }
         .active{
             background-color: $mercury;
-        }
-
+        }  
     }
 }

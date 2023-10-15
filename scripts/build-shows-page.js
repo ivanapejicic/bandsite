@@ -8,6 +8,7 @@ function convertTimestampShows(ts) {
     const date = (new Date(ts)).toDateString();
     return date;
 }
+
 // function that will help create a container for each show and reduce repeating 
 function createMyElement(elClass, content) {
     const element = document.createElement("div");
@@ -31,17 +32,24 @@ function displayShow(showObject) {
     const button = document.createElement("button");
     button.classList.add("concerts__content-container__button", "labels-buttons");
     button.textContent = "BUY TICKETS";
-
     concertDiv.appendChild(button);
-
     concertsContainer.appendChild(concertDiv);
-    
-};
+
+    concertDiv.addEventListener("click", () => {
+        concertDiv.classList.add('active');
+
+        const allConcertDivs = document.querySelectorAll(".concerts__content-container");
+        allConcertDivs.forEach((differentShow) => {
+            if (differentShow !== concertDiv) {
+                differentShow.classList.remove('active');
+            }
+        });
+    });
+}
 
 async function displayShows() {
     try {
         const shows = await backendShows.getShows();
-        
         for (const show of shows) {
             displayShow(show);
         }
@@ -75,30 +83,5 @@ function addShowsHeader() {
     showsHeader.appendChild(titleContainer);
 
 };
-
-
-// function that will make a row "selected" until another row is clicked
-// async function activeShow() {
-//     try {
-//         const shows = await backendShows.getShows();
-//         shows.forEach((show) => {
-//             show.addEventListener('click', () => {
-//                 show.classList.add('active');
-//                 shows.forEach((differentShow) => {
-//                     if (differentShow !== show) {
-//                         differentShow.classList.remove('active');
-//                     }
-//                 });
-//             });
-//         });
-//     }
-
-//     catch {
-//         alert('cannot get data from API');
-//     }
-// }
-
-// activeShow();
-
 
 addShowsHeader();
