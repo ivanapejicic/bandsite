@@ -67,27 +67,31 @@ displayComments();
 
 // handling form input
 async function submitHandler(event) {
-    event.preventDefault();
-    const nameElement = form.nameInput.value;
-    const commentElement = form.textInput.value;
-    const date = new Date(Date.now());
-    const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
-    const formatDate = date.toLocaleDateString(undefined, options);
+    try {
+        event.preventDefault();
+        const nameElement = form.nameInput.value;
+        const commentElement = form.textInput.value;
+        const date = new Date(Date.now());
+        const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+        const formatDate = date.toLocaleDateString(undefined, options);
 
-    if (nameElement === '' || commentElement === '') {
-        alert("400. Bad request error.");
-        return;
+        if (nameElement === '' || commentElement === '') {
+            alert("400. Bad request error.");
+            return;
+        }
+        let commentObject = {
+            name: nameElement,
+            comment: commentElement
+        };
+        await backendComments.postComment(commentObject);
+        commentsCont.innerText = '';
+
+        displayComments();
+        form.nameInput.value = '';
+        form.textInput.value = '';
+    } catch {
+        console.error(error);
     }
-    let commentObject  = {
-        name: nameElement,
-        comment: commentElement
-    };
-    await backendComments.postComment(commentObject);
-    commentsCont.innerText = '';
-    
-    displayComments();
-    form.nameInput.value = '';
-    form.textInput.value = '';
 }
 
 form.addEventListener("submit", submitHandler);
